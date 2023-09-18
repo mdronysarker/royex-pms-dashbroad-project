@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PROPERTY MANAGEMENT SYSTEM</title>
+
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon.png"
+    />
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link href="assets/dist/css/style.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/dropzone.css" />
+  </head>
+
+  <body>
+    <!-- -------------------------------------------------------------- -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="preloader">
+      <img
+        src="assets/img/favicon.png"
+        alt="loading-img"
+        class="img-fluid loading-img"
+      />
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- -------------------------------------------------------------- -->
+    <div id="main-wrapper">
+      <!-- -------------------------------------------------------------- -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- -------------------------------------------------------------- -->
+      <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header">
+            <!-- This is for the sidebar toggle which is visible on mobile only -->
+            <a
+              class="nav-toggler waves-effect waves-light d-block d-md-none"
+              href="javascript:void(0)"
+            >
+              <i class="ri-close-line fs-6 ri-menu-2-line"></i>
+            </a>
+            <!-- -------------------------------------------------------------- -->
+            <!-- Logo -->
+            <!-- -------------------------------------------------------------- -->
+            <a class="navbar-brand" href="index.html">
+              <b class="logo-icon">
+                <img
+                  src="assets/images/logo.png"
+                  alt="homepage"
+                  class="dark-logo"
+                />
+               
+              </b>
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <!-- <img
+                  src="assets/images/logo.png"
+                  alt="homepage"
+                  class="dark-logo"
+                  height="69px"
+                /> -->
+              </span>
+            </a>
+            <!-- -------------------------------------------------------------- -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- -------------------------------------------------------------- -->
+            <a
+              class="topbartoggler d-block d-md-none waves-effect waves-light"
+              href="javascript:void(0)"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i data-feather="more-horizontal" class="feather-sm"></i
+            ></a>
+          </div>
+          <!-- -------------------------------------------------------------- -->
+          <!-- End Logo -->
+          <!-- -------------------------------------------------------------- -->
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <!-- -------------------------------------------------------------- -->
+            <!-- toggle and nav items -->
+            <!-- -------------------------------------------------------------- -->
+            <ul class="navbar-nav me-auto d-none">
+              <!-- This is  -->
+              <li class="nav-item">
+                <a
+                  class="nav-link sidebartoggler d-none d-md-block waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  ><i data-feather="menu" class="feather-sm"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="search">
+              <input type="text" placeholder="Search..." />
+              <div class="search-icon d-flex gap-1 ms-2 gap-lg-2 ms-lg-3">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+            <!-- -------------------------------------------------------------- -->
+            <!-- Right side toggle and nav items -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- <ul class="navbar-nav align-items-center w-100"> -->
+            <ul class="navbar-nav align-items-center justify-content-end w-100">
+              <li class="nav-item">
+                <a
+                  class="nav-link d-none d-md-block waves-effect waves-dark device-min"
+                  href="#"
+                  >Plans and pricing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link d-none d-md-block waves-effect waves-dark"
+                  href="#"
+                  >Consulting</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link d-none d-md-block waves-effect waves-dark"
+                  href="#"
+                >
+                  <img
+                    src="assets/images/icon/dark-light-mood.png"
+                    alt="dark-light-mood"
+                    class="image-fluid"
+                    height="18px"
+                    style="margin-top: -4px"
+                  />
+                </a>
+              </li>
+
+              <!-- -------------------------------------------------------------- -->
+              <!-- Comment -->
+              <!-- -------------------------------------------------------------- -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i data-feather="bell"></i>
+                  <div class="notify">
+                    <span class="notify-count">
+                      <span>2</span>
+                    </span>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end mailbox dropdown-menu-animate-up"
+                >
+                  <ul class="list-style-none">
+                    <li>
+                      <div class="border-bottom rounded-top py-3 px-4">
+                        <div class="mb-0 font-weight-medium fs-4">
+                          Notifications
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="message-center notifications position-relative"
+                        style="height: 230px"
+                      >
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-danger text-danger btn-circle"
+                          >
+                            <i
+                              data-feather="link"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Luanch Admin
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just see the my new admin!</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:30 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-success text-success btn-circle"
+                          >
+                            <i
+                              data-feather="calendar"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Event today
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just a reminder that you have event</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:10 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span class="btn btn-light-info text-info btn-circle">
+                            <i
+                              data-feather="settings"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Settings
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >You can customize this template as you want</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:08 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-primary text-primary btn-circle"
+                          >
+                            <i
+                              data-feather="users"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Pavan kumar
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just see the my admin!</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:02 AM</span
+                            >
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        class="nav-link border-top text-center text-dark pt-3"
+                        href="javascript:void(0);"
+                      >
+                        <strong>Check all notifications</strong>
+                        <i data-feather="chevron-right" class="feather-sm"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item dropdown user-dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark user-pic"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/icon/user-pic.png"
+                    alt="user"
+                    width="34"
+                    class="profile-pic rounded-circle"
+                  />
+                  <span>Tamim Tanvir</span>
+                  <div class="down-arrow">
+                    <i class="fas fa-chevron-down" width="34"></i>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end user-dd animated flipInY"
+                >
+                  <div
+                    class="d-flex no-block align-items-center p-3 bg-primary text-white mb-2"
+                  >
+                    <div class="">
+                      <img
+                        src="assets/images/icon/user-pic.png"
+                        alt="user"
+                        class="rounded-circle"
+                        width="60px"
+                      />
+                    </div>
+                    <div class="ms-2">
+                      <h4 class="mb-0 text-white">Steave Jobs</h4>
+                      <p class="mb-0">varun@gmail.com</p>
+                    </div>
+                  </div>
+                  <a class="dropdown-item" href="#"
+                    ><i
+                      data-feather="user"
+                      class="feather-sm text-info me-1 ms-1"
+                    ></i>
+                    My Profile</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i
+                      data-feather="credit-card"
+                      class="feather-sm text-primary me-1 ms-1"
+                    ></i>
+                    My Balance</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i
+                      data-feather="mail"
+                      class="feather-sm text-success me-1 ms-1"
+                    ></i>
+                    Inbox</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"
+                    ><i
+                      data-feather="settings"
+                      class="feather-sm text-warning me-1 ms-1"
+                    ></i>
+                    Account Setting</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"
+                    ><i
+                      data-feather="log-out"
+                      class="feather-sm text-danger me-1 ms-1"
+                    ></i>
+                    Logout</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <div class="pl-4 p-2">
+                    <a
+                      href="#"
+                      class="btn d-block w-100 btn-primary rounded-pill"
+                      >View Profile</a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav" class="w-100">
+              <li class="sidebar-item user-profile">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark user-box"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                <img
+                  src="assets/images/users/profile.png"
+                  alt="user"
+                  class="m-0"
+                />
+                  <div class="profile-left d-flex align-items-center gap-3">
+                    <div class="user-name">
+                      <h3 class="hide-menu">Royex Technologies</h3>
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="right">
+                    <img
+                      src="assets/images/users/arrow-up-down.png"
+                      alt="arrow-icon"
+                    />
+                  </div>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level p-4">
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0)" class="sidebar-link p-0">
+                      <span class="hide-menu"> My Profile </span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0)" class="sidebar-link p-0">
+                      <span class="hide-menu"> My Balance </span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0)" class="sidebar-link p-0">
+                      <span class="hide-menu"> Inbox </span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0)" class="sidebar-link p-0">
+                      <span class="hide-menu"> Logout </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark sidebar-link--dashboard"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none"><mask id="a" width="25" height="25" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#D9D9D9" d="M.5.977h24v24H.5z"/></mask><g mask="url(#a)"><path fill="#343A40" d="M5.5 21.977c-.55 0-1.02-.196-1.412-.588a1.926 1.926 0 0 1-.588-1.412v-14c0-.55.196-1.021.588-1.413A1.926 1.926 0 0 1 5.5 3.977h14c.55 0 1.02.195 1.413.587.391.392.587.863.587 1.413v14c0 .55-.196 1.02-.587 1.412a1.926 1.926 0 0 1-1.413.588h-14Zm0-2h6v-14h-6v14Zm8 0h6v-7h-6v7Zm0-9h6v-5h-6v5Z"/></g></svg>
+                  <span class="hide-menu">Dashboard</span></a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" fill="none"><path fill="#343A40" d="M18.648 12.447h2V5.97a1.947 1.947 0 0 0-.85-1.625l-5-3.575a1.936 1.936 0 0 0-1.15-.375c-.416 0-.8.125-1.15.375l-5 3.575a1.94 1.94 0 0 0-.85 1.625v1.475h2v-1.5l5-3.5 5 3.5v6.5Zm-4-6a.48.48 0 0 1-.35-.15.48.48 0 0 1 0-.7.48.48 0 0 1 .7 0 .48.48 0 0 1 0 .7.48.48 0 0 1-.35.15Zm-2 0a.48.48 0 0 1-.35-.15.48.48 0 0 1 0-.7.48.48 0 0 1 .7 0 .48.48 0 0 1 0 .7.48.48 0 0 1-.35.15Zm2 2a.48.48 0 0 1-.35-.15.48.48 0 0 1 0-.7.48.48 0 0 1 .7 0 .48.48 0 0 1 0 .7.48.48 0 0 1-.35.15Zm-2 0a.48.48 0 0 1-.35-.15.48.48 0 0 1 0-.7.48.48 0 0 1 .7 0 .48.48 0 0 1 0 .7.48.48 0 0 1-.35.15Zm.95 10.4 5.95-1.85a1.141 1.141 0 0 0-.362-.388.93.93 0 0 0-.538-.163h-5.05a9.1 9.1 0 0 1-1.075-.05 3.955 3.955 0 0 1-.825-.2l-1.425-.475a.905.905 0 0 1-.575-.5 1.04 1.04 0 0 1-.05-.774.955.955 0 0 1 .488-.588.97.97 0 0 1 .762-.063l1.05.35c.284.084.605.15.963.2.358.05.846.084 1.462.1h.275a.948.948 0 0 0-.162-.524.753.753 0 0 0-.388-.325l-5.85-2.15h-1.6v5.5l6.95 1.9Zm-.525 1.95-6.425-1.8a1.93 1.93 0 0 1-.787 1.05c-.392.266-.796.4-1.213.4h-2c-.55 0-1.02-.196-1.412-.588a1.926 1.926 0 0 1-.588-1.413v-7c0-.55.196-1.02.588-1.412a1.926 1.926 0 0 1 1.412-.588h5.6c.117 0 .234.013.35.038.117.025.225.054.325.087l5.875 2.175c.55.2.996.55 1.338 1.05.342.5.512 1.05.512 1.65h2c.834 0 1.542.276 2.125.825.584.55.875 1.276.875 2.175 0 .367-.095.655-.287.863-.192.208-.488.38-.888.512l-6.25 1.95c-.183.067-.375.1-.575.1-.2 0-.391-.024-.575-.074Zm-10.425-2.35h2v-7h-2v7Z"/></svg>
+                  <span class="hide-menu">Properites</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="entry-list.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu"> Master List </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="entry-name.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i
+                      ><span class="hide-menu"> Products</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" fill="none"><path fill="#343A40" d="M2.5 18.977c-.55 0-1.02-.196-1.413-.588A1.926 1.926 0 0 1 .5 16.977v-14c0-.55.196-1.021.587-1.413A1.926 1.926 0 0 1 2.5.977h6c.55 0 1.02.195 1.412.587.392.392.588.863.588 1.413v2h8c.55 0 1.02.195 1.413.587.391.392.587.863.587 1.413v10c0 .55-.196 1.02-.587 1.412a1.926 1.926 0 0 1-1.413.588h-16Zm0-2h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2v-2h-2v2Zm4 12h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2v-2h-2v2Zm4 12h8v-10h-8v2h2v2h-2v2h2v2h-2v2Zm4-6v-2h2v2h-2Zm0 4v-2h2v2h-2Z"/></svg>
+                  <span class="hide-menu">Booking</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="entry-list.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu"> Booking List </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="entry-name.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i
+                      ><span class="hide-menu"> New Booking </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="entry-name.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i
+                      ><span class="hide-menu"> Guest List </span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="15" fill="none"><path fill="#1C1B1F" d="M2.5 14.977c-.55 0-1.02-.196-1.413-.588A1.926 1.926 0 0 1 .5 12.977v-10c0-.55.196-1.021.587-1.413A1.926 1.926 0 0 1 2.5.977h10c.55 0 1.02.195 1.412.587.392.392.588.863.588 1.413v10c0 .55-.196 1.02-.588 1.412a1.926 1.926 0 0 1-1.412.588h-10Zm0-3.65a9.78 9.78 0 0 1 2.35-1 9.784 9.784 0 0 1 2.65-.35c.933 0 1.817.116 2.65.35a9.78 9.78 0 0 1 2.35 1v-8.35h-10v8.35Zm5 .65c-.683 0-1.35.083-2 .25a7.429 7.429 0 0 0-1.85.75h7.7a7.428 7.428 0 0 0-1.85-.75 8.019 8.019 0 0 0-2-.25Zm0-2.75c-.75 0-1.396-.271-1.938-.813-.541-.542-.812-1.187-.812-1.937s.27-1.396.813-1.938c.541-.542 1.187-.812 1.937-.812s1.396.27 1.938.812c.541.542.812 1.188.812 1.938s-.27 1.395-.813 1.937c-.541.542-1.187.813-1.937.813Zm0-1.85c.25 0 .463-.088.637-.263a.868.868 0 0 0 .263-.637.868.868 0 0 0-.263-.638.868.868 0 0 0-.637-.262.868.868 0 0 0-.638.262.868.868 0 0 0-.262.638c0 .25.088.462.263.637a.868.868 0 0 0 .637.263Zm10 7.6a.968.968 0 0 1-.712-.288.968.968 0 0 1-.288-.712v-12c0-.284.096-.521.288-.713A.968.968 0 0 1 17.5.977c.283 0 .52.095.712.287.192.192.288.43.288.713v12c0 .283-.096.52-.288.712a.968.968 0 0 1-.712.288Zm4 0a.968.968 0 0 1-.712-.288.968.968 0 0 1-.288-.712v-12c0-.284.096-.521.288-.713A.968.968 0 0 1 21.5.977c.283 0 .52.095.712.287.192.192.288.43.288.713v12c0 .283-.096.52-.288.712a.968.968 0 0 1-.712.288Z"/></svg>
+                  <span class="hide-menu">CRM</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu"> Category</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" fill="none"><path fill="#343A40" d="M1.5 16.977a.968.968 0 0 1-.713-.288.968.968 0 0 1-.287-.712v-1.8c0-.567.146-1.088.438-1.563.291-.475.679-.837 1.162-1.087a14.843 14.843 0 0 1 3.15-1.163 13.755 13.755 0 0 1 3.25-.387c1.1 0 2.183.129 3.25.387 1.067.258 2.117.646 3.15 1.163.483.25.87.612 1.162 1.087.292.475.438.996.438 1.563v1.8c0 .283-.096.52-.288.712a.968.968 0 0 1-.712.288h-14Zm16.525 0c.15-.117.267-.263.35-.438a1.35 1.35 0 0 0 .125-.587v-1.975c0-.734-.204-1.438-.613-2.113-.408-.675-.987-1.254-1.737-1.737a12.507 12.507 0 0 1 4.5 1.4c.6.333 1.058.704 1.375 1.112.317.408.475.854.475 1.338v2c0 .283-.096.52-.288.712a.968.968 0 0 1-.712.288h-3.475Zm-9.525-8c-1.1 0-2.042-.392-2.825-1.175C4.892 7.018 4.5 6.077 4.5 4.977s.392-2.042 1.175-2.825C6.458 1.368 7.4.977 8.5.977s2.042.391 2.825 1.175c.783.783 1.175 1.725 1.175 2.825s-.392 2.041-1.175 2.825C10.542 8.585 9.6 8.977 8.5 8.977Zm10-4c0 1.1-.392 2.041-1.175 2.825-.783.783-1.725 1.175-2.825 1.175-.183 0-.417-.021-.7-.063a6.12 6.12 0 0 1-.7-.137 5.947 5.947 0 0 0 1.037-1.775c.242-.65.363-1.325.363-2.025s-.12-1.375-.363-2.025A5.948 5.948 0 0 0 13.1 1.177a3.04 3.04 0 0 1 .7-.163c.233-.025.467-.037.7-.037 1.1 0 2.042.391 2.825 1.175.783.783 1.175 1.725 1.175 2.825Zm-16 10h12v-.8a.973.973 0 0 0-.5-.85c-.9-.45-1.808-.788-2.725-1.013a11.6 11.6 0 0 0-5.55 0c-.917.225-1.825.563-2.725 1.013a.973.973 0 0 0-.5.85v.8Zm6-8c.55 0 1.02-.196 1.412-.588.392-.392.588-.862.588-1.412 0-.55-.196-1.021-.588-1.413A1.926 1.926 0 0 0 8.5 2.977c-.55 0-1.02.195-1.412.587A1.926 1.926 0 0 0 6.5 4.977c0 .55.196 1.02.588 1.412.391.392.862.588 1.412.588Z"/></svg>
+                  <span class="hide-menu">Tenant</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="none"><path fill="#1C1B1F" d="M17.35 21.952c-.133 0-.258-.021-.375-.063a.877.877 0 0 1-.325-.212l-5.1-5.1a.878.878 0 0 1-.213-.325 1.106 1.106 0 0 1-.062-.375c0-.134.02-.259.063-.375a.877.877 0 0 1 .212-.325l2.125-2.125c.1-.1.208-.171.325-.213.117-.042.242-.062.375-.062s.258.02.375.062a.876.876 0 0 1 .325.213l5.1 5.1c.1.1.17.208.212.325.042.116.063.241.063.375 0 .133-.02.258-.063.375a.878.878 0 0 1-.212.325l-2.125 2.125c-.1.1-.208.17-.325.212a1.109 1.109 0 0 1-.375.063Zm0-2.375.725-.725-3.675-3.675-.725.725 3.675 3.675Zm-13.725 2.4c-.133 0-.263-.025-.388-.075a.999.999 0 0 1-.337-.225l-2.1-2.1a.999.999 0 0 1-.225-.338 1.034 1.034 0 0 1-.075-.387c0-.134.025-.259.075-.375.05-.117.125-.225.225-.325l5.3-5.3h2.125l.85-.85L4.95 7.877H3.525L.5 4.852l2.825-2.825L6.35 5.052v1.425l4.125 4.125 2.9-2.9L12.3 6.627l1.4-1.4h-2.825l-.7-.7 3.55-3.55.7.7v2.825l1.4-1.4 3.55 3.55a2.916 2.916 0 0 1 .875 2.1c0 .4-.075.783-.225 1.15-.15.366-.367.691-.65.975L17.25 8.752l-1.4 1.4-1.05-1.05-5.175 5.175v2.1l-5.3 5.3c-.1.1-.208.175-.325.225a.942.942 0 0 1-.375.075Zm0-2.4 4.25-4.25v-.725H7.15l-4.25 4.25.725.725Zm0 0-.725-.725.375.35.35.375Z"/></svg>
+                  <span class="hide-menu">Maintenance</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu"> Category</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" fill="none"><path fill="#1C1B1F" d="M5.5 12.977c.283 0 .52-.096.713-.288a.968.968 0 0 0 .287-.712.967.967 0 0 0-.287-.713.967.967 0 0 0-.713-.287.967.967 0 0 0-.713.287.967.967 0 0 0-.287.713c0 .283.096.52.287.712.192.192.43.288.713.288Zm0-3c.283 0 .52-.096.713-.288a.968.968 0 0 0 .287-.712v-3a.968.968 0 0 0-.287-.713.968.968 0 0 0-.713-.287.968.968 0 0 0-.713.287.968.968 0 0 0-.287.713v3c0 .283.096.52.287.712.192.192.43.288.713.288Zm4 2h6c.283 0 .52-.096.712-.288a.968.968 0 0 0 .288-.712.967.967 0 0 0-.288-.713.968.968 0 0 0-.712-.287h-6a.968.968 0 0 0-.713.287.967.967 0 0 0-.287.713c0 .283.096.52.287.712.192.192.43.288.713.288Zm0-4h6c.283 0 .52-.096.712-.288a.967.967 0 0 0 .288-.712.967.967 0 0 0-.288-.713.968.968 0 0 0-.712-.287h-6a.968.968 0 0 0-.713.287.968.968 0 0 0-.287.713c0 .283.096.52.287.712.192.192.43.288.713.288Zm-7 9c-.55 0-1.02-.196-1.413-.588A1.926 1.926 0 0 1 .5 14.977v-12c0-.55.196-1.021.587-1.413A1.926 1.926 0 0 1 2.5.977h16c.55 0 1.02.195 1.413.587.391.392.587.863.587 1.413v12c0 .55-.196 1.02-.587 1.412a1.926 1.926 0 0 1-1.413.588h-16Zm0-2h16v-12h-16v12Z"/></svg>
+                  <span class="hide-menu">Reports</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" fill="none"><path fill="#1C1B1F" d="M8.5 10.977c-.983 0-1.813-.338-2.487-1.013C5.338 9.29 5 8.46 5 7.477c0-.983.338-1.813 1.013-2.488.675-.675 1.504-1.012 2.487-1.012.983 0 1.813.337 2.488 1.012S12 6.494 12 7.477c0 .983-.338 1.812-1.012 2.487-.675.675-1.505 1.013-2.488 1.013Zm0-2c.433 0 .792-.142 1.075-.425.283-.283.425-.642.425-1.075 0-.433-.142-.792-.425-1.075-.283-.283-.642-.425-1.075-.425-.433 0-.792.142-1.075.425C7.142 6.685 7 7.044 7 7.477c0 .433.142.792.425 1.075.283.283.642.425 1.075.425Zm0-6.875-6 2.25v4.725c0 .9.125 1.775.375 2.625.25.85.592 1.65 1.025 2.4.7-.35 1.433-.625 2.2-.825a9.47 9.47 0 0 1 2.4-.3c.833 0 1.633.1 2.4.3.767.2 1.5.475 2.2.825.433-.75.775-1.55 1.025-2.4.25-.85.375-1.725.375-2.625V4.352l-6-2.25Zm0 12.875c-.6 0-1.183.067-1.75.2a8.87 8.87 0 0 0-1.625.55c.483.5 1.008.933 1.575 1.3s1.167.65 1.8.85a7.408 7.408 0 0 0 1.8-.85 8.946 8.946 0 0 0 1.575-1.3 8.87 8.87 0 0 0-1.625-.55 7.611 7.611 0 0 0-1.75-.2Zm0 4.9c-.117 0-.225-.008-.325-.025s-.2-.042-.3-.075c-2.25-.75-4.042-2.137-5.375-4.163-1.333-2.025-2-4.204-2-6.537V4.352c0-.417.12-.792.363-1.125.241-.333.554-.575.937-.725l6-2.25a2.07 2.07 0 0 1 .7-.125c.233 0 .467.042.7.125l6 2.25c.383.15.696.392.938.725.241.333.362.708.362 1.125v4.725c0 2.333-.667 4.512-2 6.537-1.333 2.026-3.125 3.413-5.375 4.163-.1.033-.2.058-.3.075-.1.017-.208.025-.325.025Z"/></svg>
+                  <span class="hide-menu">System</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul id="sidebarnav2" class="sidebarnav2 w-100">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                  ><img
+                    src="assets/images/icon/billing.png"
+                    alt="credit_card"
+                    class="img-fluid"
+                  />
+                  <span class="hide-menu">Accounts Billing</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                  ><img
+                    src="assets/images/icon/consulting.png"
+                    alt="person"
+                    class="img-fluid"
+                  />
+                  <span class="hide-menu">Consulting services</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                  ><img
+                    src="assets/images/icon/support.png"
+                    alt="support"
+                    class="img-fluid"
+                  />
+                  <span class="hide-menu">Support</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                  ><img
+                    src="assets/images/icon/knowledge.png"
+                    alt="knowledge-img"
+                    class="img-fluid"
+                  />
+                  <span class="hide-menu">Knowledge Base</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <div class="powered-by">
+                    <span>Powered by</span>
+                    <img
+                      src="assets/images/icon/royex-logo.png"
+                      alt="royex-logo"
+                      class="img-fluid"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <div class="page-wrapper">
+        <div class="container-fluid">
+          <section class="section entry-list-section" id="entry-list-section">
+            <div class="section-title">
+               <h3 class="category-heading mb-0">Add New Booking</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-6 mt-5" style="height: 100vh;"
+                    <div class="tab-box">
+                        <!-- Nav tabs -->
+                        <div class="tab-nav mx-auto mx-sm-0">
+                          <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#navpill-1" role="tab">
+                                <span class="category-nav-span">Personal Details</span>
+                              </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#navpill-2" role="tab">
+                                <span class="category-nav-span">Address</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#navpill-3" role="tab">
+                                <span class="category-nav-span">Upload Document</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <!-- new booking nav-pill 1 -->
+                            <div class="tab-pane" id="navpill-1" role="tabpanel">
+                                <div class="tab-box">
+                                  <div class="row">
+                                    <div class="col-12 col-lg-4 px-4">      
+                                      <div class="product-Name d-flex flex-column my-4">
+                                        <label>Full Name</label>
+                                        <input type="text" placeholder="Your Name">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-Name d-flex flex-column my-4">
+                                        <label>Last Name</label>
+                                        <input type="text" placeholder="Your Name">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-Name d-flex flex-column my-4">
+                                        <label>Birthday</label>
+                                        <input type="text" placeholder="05/11/2000">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-type">
+                                        <label>Gender</label>
+                                        <div class="option-container">
+                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                <option selected>Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>                        
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Phone</label>
+                                        <input type="numer" placeholder="95695665655" >
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Email</label>
+                                        <input type="text" placeholder="adad@ada.com">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-type">
+                                        <label>Adultls</label>
+                                         <div class="option-container">
+                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                <option selected>02</option>
+                                                <option value="01">01</option>
+                                            </select>
+                                            <i class="fas fa-chevron-down"></i>
+                                         </div>
+                                       </div>
+                                    </div>  
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-type">
+                                        <label>Children</label>
+                                         <div class="option-container">
+                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                <option selected>02</option>
+                                                <option value="01">01</option>
+                                            </select>
+                                            <i class="fas fa-chevron-down"></i>
+                                         </div>
+                                       </div>
+                                    </div>  
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Check In</label>
+                                        <input type="text" placeholder="Jul 10, 2023">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Check Out</label>
+                                        <input type="text" placeholder="Jul 20, 2023">
+                                      </div>                         
+                                    </div>
+                                  </div>
+                                  <div class="save-btn mt-4">
+                                    <a href="#">Save</a>
+                                  </div>
+                                </div>
+                            </div>
+                          <!-- new booking nav-pill 1-->
+
+                          <!-- new booking pavpill 2 -->
+                          <div class="tab-pane" id="navpill-2" role="tabpanel">
+                              <div class="tab-box">
+                                  <div class="address-title">
+                                      <h2>Address</h2>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12 col-lg-4 px-4">
+                                        <div class="product-type">
+                                          <label>Address Type</label>
+                                          <div class="option-container">
+                                              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                  <option selected="">Home Address</option>
+                                                  <option value="Demo 2">Other</option>
+                                              </select>
+                                              <i class="fas fa-caret-down"></i>
+                                          </div>
+                                        </div> 
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                        <div class="product-type">
+                                          <label>Country</label>
+                                          <div class="option-container">
+                                              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                  <option selected="">USA</option>
+                                                  <option value="UK">UK</option>
+                                              </select>
+                                              <i class="fas fa-caret-down"></i>
+                                          </div>
+                                        </div> 
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                      <div class="product-type">
+                                        <label>State</label>
+                                        <div class="option-container">
+                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                <option selected="">New York</option>
+                                                <option value="UK">UK</option>
+                                            </select>
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                      </div> 
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">
+                                        <div class="product-type">
+                                            <label>City</label>
+                                            <div class="option-container">
+                                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                    <option selected="">Dhaka</option>
+                                                    <option value="UK">UK</option>
+                                                </select>
+                                                <i class="fas fa-caret-down"></i>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                    <div class="col-12 col-lg-4 px-4">      
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Flat/House No :</label>
+                                        <input type="text" placeholder="6396/A">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">      
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Near By Location</label>
+                                        <input type="text" placeholder="Central Bank">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">      
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Building Name</label>
+                                        <input type="text" placeholder="Corporate">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">      
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Latitude</label>
+                                        <input type="text" placeholder="">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4">      
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Longitude</label>
+                                        <input type="text" placeholder="">
+                                      </div>                         
+                                    </div>
+                                    <div class="col-12 col-lg-4 px-4 mt-3">      
+                                      <div class="product-Name d-flex flex-column">
+                                        <label>Address</label>
+                                        <input type="text" placeholder="69,street road , DC">
+                                      </div>                         
+                                    </div>
+                                    <div class="switchToggle mt-4 d-flex align-items-center gap-3">
+                                      <input type="checkbox" checked="" id="switch">
+                                      <label for="switch"></label>
+                                      <span style="font-size: 16px;">Is this Default Address</span>
+                                    </div>
+                                    <!-- map div goes here -->
+                                    <div class="google-map mt-4">
+                                      <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Hide Map
+                                            </button>
+                                          </h2>
+                                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3065.224488780893!2d-75.23342282353961!3d39.801955992826265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6db9c0e0c7219%3A0xe7eaa9eb6c060de6!2sMt%20Royal%20Ln%2C%20East%20Greenwich%20Township%2C%20NJ%2008020%2C%20USA!5e0!3m2!1sen!2sbd!4v1689766454005!5m2!1sen!2sbd" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <!-- map div ends here -->
+                                      <div class="save-btn mt-4">
+                                        <a href="#">Save</a>
+                                      </div>
+                                    </div>
+                                 </div>
+                              </div>
+                          </div>
+                          <!-- new booking pavpill 2 -->
+
+                          <!-- new booking navpill 3 -->
+                  
+                           <div class="tab-pane active" id="navpill-3" role="tabpanel">
+                              <div class="col-lg-3">
+                                <div class="tab-box">
+                                  <div class="upload-box upload-box--margin upload-img-box d-flex justify-content-center align-items-center flex-column">
+                            
+                                    <div class="upload-img upload-pic">
+                                      <img src="assets/images/icon/upload-icon.png" alt="cloud_upload">
+                                      <form class="upload-img-form">
+                                        <input type="file" class="file" multiple="">
+                                      </form>
+                                    </div>
+                                    <h2>Upload Media file</h2>
+                                    <p class="upload-title">Drag & drop or <span style="color: #BB2429; font-size: 1.6rem;">Choose file</span> to upload</p>
+                                  </div>
+                                  <div class="product-photo d-flex gap-3 mt-4"></div>
+                                </div>
+                              </div>
+                              <div class="save-btn mt-4">
+                                <a href="#">Save</a>
+                              </div>
+                           </div> 
+                          <!-- new booking navpill 3 --> 
+
+                        </div>
+                    </div>
+                </div>      
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- -------------------------------------------------------------- -->
+      <!-- End Page wrapper  -->
+      <!-- -------------------------------------------------------------- -->
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- End Wrapper -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- All Jquery -->
+    <!-- -------------------------------------------------------------- -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- apps -->
+    <script src="assets/dist/js/app.min.js"></script>
+    <script src="assets/dist/js/app.init.minimal.js"></script>
+    <script src="assets/dist/js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="assets/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="assets/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="assets/dist/js/feather.min.js"></script>
+    <script src="assets/dist/js/custom.min.js"></script>
+  </body>
+</html>

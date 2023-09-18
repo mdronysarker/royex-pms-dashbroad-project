@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PROPERTY MANAGEMENT SYSTEM</title>
+
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon.png"
+    />
+    <!-- Custom CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link href="assets/dist/css/style.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/dropzone.css" />
+  </head>
+
+  <body>
+    <!-- -------------------------------------------------------------- -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="preloader">
+      <img
+        src="assets/img/favicon.png"
+        alt="loading-img"
+        class="img-fluid loading-img"
+      />
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- -------------------------------------------------------------- -->
+    <div id="main-wrapper">
+      <!-- -------------------------------------------------------------- -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- -------------------------------------------------------------- -->
+      <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header">
+            <!-- This is for the sidebar toggle which is visible on mobile only -->
+            <a
+              class="nav-toggler waves-effect waves-light d-block d-md-none"
+              href="javascript:void(0)"
+            >
+              <i class="ri-close-line fs-6 ri-menu-2-line"></i>
+            </a>
+            <!-- -------------------------------------------------------------- -->
+            <!-- Logo -->
+            <!-- -------------------------------------------------------------- -->
+            <a class="navbar-brand" href="index.html">
+              <b class="logo-icon">
+                <img
+                  src="assets/images/logo.png"
+                  alt="homepage"
+                  class="dark-logo Light-img"
+                />
+                <!-- svg starts -->
+                <svg class="dark-svg" xmlns="http://www.w3.org/2000/svg" width="292" height="47" fill="none"><path d="M95.03 8.492c0 1.313-.301 2.519-.904 3.616-.603 1.077-1.528 1.948-2.776 2.615-1.249.668-2.799 1.001-4.65 1.001h-3.422v8.136h-5.52V1.196H86.7c1.808 0 3.337.312 4.585.936 1.248.624 2.185 1.485 2.809 2.583.624 1.098.936 2.357.936 3.777Zm-8.75 2.841c1.055 0 1.841-.247 2.358-.742.516-.495.774-1.195.774-2.099 0-.904-.258-1.603-.775-2.098-.516-.495-1.302-.743-2.356-.743h-3.003v5.683h3.003ZM116.565 23.86l-4.714-8.555h-1.323v8.555h-5.521V1.196h9.266c1.786 0 3.304.312 4.552.936 1.27.624 2.217 1.485 2.841 2.583.624 1.076.936 2.282.936 3.616 0 1.507-.43 2.852-1.291 4.036-.839 1.183-2.088 2.023-3.745 2.518l5.23 8.975h-6.231Zm-6.037-12.462h3.422c1.012 0 1.765-.247 2.26-.742.516-.495.775-1.195.775-2.099 0-.86-.259-1.539-.775-2.034-.495-.495-1.248-.743-2.26-.743h-3.422v5.618ZM143.889 24.086c-2.13 0-4.089-.495-5.876-1.485-1.764-.99-3.174-2.367-4.229-4.132-1.033-1.787-1.55-3.789-1.55-6.006 0-2.216.517-4.207 1.55-5.972 1.055-1.765 2.465-3.143 4.229-4.133 1.787-.99 3.746-1.485 5.876-1.485 2.131 0 4.079.495 5.844 1.485a10.758 10.758 0 0 1 4.197 4.133c1.033 1.765 1.55 3.756 1.55 5.973 0 2.216-.517 4.218-1.55 6.005a11.051 11.051 0 0 1-4.197 4.132c-1.765.99-3.713 1.485-5.844 1.485Zm0-5.036c1.808 0 3.25-.603 4.327-1.808 1.097-1.206 1.646-2.798 1.646-4.779 0-2.001-.549-3.594-1.646-4.778-1.077-1.205-2.519-1.808-4.327-1.808-1.829 0-3.293.592-4.39 1.776-1.077 1.184-1.615 2.787-1.615 4.81 0 2.002.538 3.606 1.615 4.811 1.097 1.184 2.561 1.776 4.39 1.776ZM182.927 8.492c0 1.313-.302 2.519-.904 3.616-.603 1.077-1.529 1.948-2.777 2.615-1.248.668-2.798 1.001-4.649 1.001h-3.422v8.136h-5.521V1.196h8.943c1.808 0 3.336.312 4.584.936 1.249.624 2.185 1.485 2.809 2.583.624 1.098.937 2.357.937 3.777Zm-8.75 2.841c1.055 0 1.84-.247 2.357-.742.517-.495.775-1.195.775-2.099 0-.904-.258-1.603-.775-2.098-.517-.495-1.302-.743-2.357-.743h-3.002v5.683h3.002ZM198.424 5.62v4.584h7.393v4.261h-7.393v4.972h8.362v4.423h-13.883V1.196h13.883v4.423h-8.362ZM229.031 23.86l-4.714-8.555h-1.323v8.555h-5.521V1.196h9.266c1.786 0 3.304.312 4.552.936 1.27.624 2.217 1.485 2.841 2.583.624 1.076.936 2.282.936 3.616 0 1.507-.43 2.852-1.291 4.036-.839 1.183-2.088 2.023-3.745 2.518l5.23 8.975h-6.231Zm-6.037-12.462h3.422c1.012 0 1.765-.247 2.26-.742.516-.495.775-1.195.775-2.099 0-.86-.259-1.539-.775-2.034-.495-.495-1.248-.743-2.26-.743h-3.422v5.618ZM261.941 1.196v4.423h-6.005V23.86h-5.521V5.62h-6.005V1.195h17.531ZM291.25 1.196l-7.845 15.174v7.49h-5.521v-7.49l-7.845-15.174h6.263l4.391 9.492 4.358-9.492h6.199ZM92.132 27.37V41.14h-2.763v-8.957l-3.69 8.957h-2.09l-3.71-8.957v8.957h-2.762V27.37h3.137l4.38 10.24 4.38-10.24h3.118ZM94.152 35.637c0-1.105.217-2.085.651-2.94.447-.855 1.046-1.513 1.796-1.973a4.83 4.83 0 0 1 2.545-.69c.815 0 1.526.164 2.131.493.618.328 1.111.743 1.479 1.242v-1.558h2.782v10.93h-2.782v-1.598c-.355.513-.848.94-1.479 1.282-.619.33-1.336.494-2.151.494-.92 0-1.762-.237-2.525-.71-.75-.474-1.349-1.138-1.796-1.993-.434-.868-.65-1.861-.65-2.98Zm8.602.039c0-.67-.131-1.243-.394-1.716a2.695 2.695 0 0 0-1.066-1.105 2.79 2.79 0 0 0-1.44-.395c-.513 0-.986.125-1.42.375-.435.25-.79.618-1.066 1.105-.263.473-.394 1.039-.394 1.697 0 .657.131 1.236.394 1.736.276.486.631.861 1.066 1.124.447.264.92.395 1.42.395.513 0 .993-.125 1.44-.375a2.865 2.865 0 0 0 1.066-1.105c.263-.486.394-1.065.394-1.736ZM114.291 30.053c1.302 0 2.354.414 3.157 1.243.802.816 1.203 1.96 1.203 3.433v6.412h-2.762v-6.037c0-.868-.217-1.532-.651-1.993-.434-.473-1.026-.71-1.776-.71-.762 0-1.368.237-1.815.71-.434.46-.651 1.125-.651 1.993v6.037h-2.762v-10.93h2.762v1.361a3.74 3.74 0 0 1 1.401-1.105 4.34 4.34 0 0 1 1.894-.414ZM120.568 35.637c0-1.105.217-2.085.651-2.94.447-.855 1.046-1.513 1.795-1.973a4.833 4.833 0 0 1 2.545-.69c.816 0 1.526.164 2.131.493.618.328 1.112.743 1.48 1.242v-1.558h2.782v10.93h-2.782v-1.598c-.355.513-.848.94-1.48 1.282-.618.33-1.335.494-2.15.494a4.696 4.696 0 0 1-2.526-.71c-.749-.474-1.348-1.138-1.795-1.993-.434-.868-.651-1.861-.651-2.98Zm8.602.039c0-.67-.132-1.243-.395-1.716a2.7 2.7 0 0 0-1.065-1.105 2.791 2.791 0 0 0-1.44-.395c-.513 0-.987.125-1.421.375-.434.25-.789.618-1.065 1.105-.263.473-.395 1.039-.395 1.697 0 .657.132 1.236.395 1.736.276.486.631.861 1.065 1.124.447.264.921.395 1.421.395.513 0 .993-.125 1.44-.375a2.87 2.87 0 0 0 1.065-1.105c.263-.486.395-1.065.395-1.736ZM138.931 30.033c.816 0 1.532.165 2.151.494.618.315 1.104.73 1.46 1.242v-1.558h2.782v11.01c0 1.012-.204 1.913-.612 2.702a4.465 4.465 0 0 1-1.835 1.894c-.815.474-1.802.71-2.959.71-1.553 0-2.828-.361-3.828-1.085-.987-.723-1.546-1.71-1.677-2.96h2.742c.145.5.454.895.928 1.185.486.302 1.072.453 1.756.453.802 0 1.453-.243 1.953-.73.5-.473.75-1.197.75-2.17v-1.697c-.356.513-.849.94-1.48 1.283-.618.342-1.329.513-2.131.513a4.693 4.693 0 0 1-2.525-.71c-.763-.474-1.368-1.138-1.816-1.993-.434-.868-.651-1.861-.651-2.98 0-1.104.217-2.084.651-2.94.448-.854 1.046-1.512 1.796-1.972a4.83 4.83 0 0 1 2.545-.69Zm3.611 5.643c0-.67-.132-1.243-.395-1.716a2.7 2.7 0 0 0-1.065-1.105 2.797 2.797 0 0 0-1.441-.395c-.513 0-.986.125-1.42.375-.434.25-.789.618-1.066 1.105-.263.473-.394 1.039-.394 1.697 0 .657.131 1.236.394 1.736.277.486.632.861 1.066 1.124.447.264.92.395 1.42.395a2.91 2.91 0 0 0 1.441-.375 2.87 2.87 0 0 0 1.065-1.105c.263-.486.395-1.065.395-1.736ZM158.182 35.44c0 .394-.026.749-.079 1.065h-7.99c.065.789.342 1.407.828 1.854.487.447 1.085.671 1.796.671 1.026 0 1.756-.44 2.19-1.322h2.979a5.033 5.033 0 0 1-1.815 2.605c-.895.67-1.993 1.006-3.295 1.006-1.052 0-1.999-.23-2.841-.69a5.076 5.076 0 0 1-1.953-1.993c-.461-.855-.691-1.842-.691-2.96 0-1.131.23-2.124.691-2.98a4.812 4.812 0 0 1 1.933-1.972c.829-.46 1.782-.69 2.861-.69 1.039 0 1.966.223 2.782.67a4.637 4.637 0 0 1 1.914 1.914c.46.815.69 1.756.69 2.821Zm-2.861-.79c-.013-.71-.269-1.276-.769-1.697-.5-.434-1.112-.65-1.835-.65-.684 0-1.263.21-1.736.63-.461.408-.743.98-.849 1.717h5.189ZM173.772 30.053c1.342 0 2.421.414 3.236 1.243.829.816 1.243 1.96 1.243 3.433v6.412h-2.762v-6.037c0-.855-.217-1.506-.651-1.953-.434-.46-1.026-.69-1.776-.69s-1.348.23-1.795.69c-.434.447-.651 1.098-.651 1.953v6.037h-2.763v-6.037c0-.855-.217-1.506-.651-1.953-.434-.46-1.026-.69-1.775-.69-.763 0-1.368.23-1.815.69-.435.447-.652 1.098-.652 1.953v6.037h-2.762v-10.93h2.762v1.322a3.7 3.7 0 0 1 1.362-1.085 4.342 4.342 0 0 1 1.854-.395c.855 0 1.618.184 2.289.552.671.356 1.19.869 1.559 1.54a3.972 3.972 0 0 1 1.539-1.52 4.462 4.462 0 0 1 2.209-.572ZM191.033 35.44c0 .394-.026.749-.079 1.065h-7.99c.065.789.342 1.407.828 1.854.487.447 1.085.671 1.796.671 1.026 0 1.756-.44 2.19-1.322h2.979a5.033 5.033 0 0 1-1.815 2.605c-.895.67-1.993 1.006-3.295 1.006-1.052 0-1.999-.23-2.841-.69a5.076 5.076 0 0 1-1.953-1.993c-.461-.855-.691-1.842-.691-2.96 0-1.131.23-2.124.691-2.98a4.812 4.812 0 0 1 1.933-1.972c.829-.46 1.782-.69 2.861-.69 1.039 0 1.966.223 2.782.67a4.637 4.637 0 0 1 1.914 1.914c.46.815.69 1.756.69 2.821Zm-2.861-.79c-.013-.71-.269-1.276-.769-1.697-.5-.434-1.112-.65-1.835-.65-.684 0-1.263.21-1.736.63-.461.408-.743.98-.849 1.717h5.189ZM199.106 30.053c1.302 0 2.355.414 3.157 1.243.802.816 1.204 1.96 1.204 3.433v6.412h-2.763v-6.037c0-.868-.217-1.532-.651-1.993-.434-.473-1.026-.71-1.775-.71-.763 0-1.368.237-1.815.71-.435.46-.652 1.125-.652 1.993v6.037h-2.762v-10.93h2.762v1.361a3.755 3.755 0 0 1 1.401-1.105 4.34 4.34 0 0 1 1.894-.414ZM209.309 32.48v5.287c0 .369.086.638.257.81.184.157.486.236.907.236h1.283v2.328h-1.736c-2.329 0-3.493-1.131-3.493-3.393V32.48h-1.302v-2.27h1.302v-2.702h2.782v2.703h2.447v2.269h-2.447ZM223.199 41.28c-.961 0-1.829-.165-2.605-.494-.763-.329-1.368-.802-1.815-1.42-.447-.619-.677-1.349-.69-2.19h2.959c.04.565.237 1.012.592 1.341.368.329.868.493 1.499.493.645 0 1.151-.15 1.52-.453.368-.316.552-.724.552-1.224 0-.407-.125-.743-.375-1.006a2.507 2.507 0 0 0-.947-.611c-.368-.158-.881-.33-1.539-.514-.894-.262-1.624-.519-2.19-.769a4.064 4.064 0 0 1-1.44-1.164c-.395-.526-.592-1.223-.592-2.091 0-.816.204-1.526.612-2.131.407-.605.98-1.066 1.716-1.381.737-.33 1.579-.494 2.526-.494 1.42 0 2.571.349 3.452 1.046.895.684 1.388 1.644 1.48 2.88h-3.038a1.54 1.54 0 0 0-.612-1.163c-.368-.316-.862-.474-1.48-.474-.539 0-.973.138-1.302.415-.316.276-.473.677-.473 1.203 0 .368.118.677.355.927.25.237.552.434.907.592.369.145.882.316 1.539.513.895.263 1.625.526 2.19.79a3.923 3.923 0 0 1 1.46 1.183c.408.526.612 1.217.612 2.072a3.9 3.9 0 0 1-.572 2.052c-.382.631-.941 1.138-1.677 1.519-.737.368-1.612.552-2.624.552ZM240.923 30.21l-6.767 16.1h-2.94l2.368-5.445-4.38-10.654h3.098l2.821 7.635 2.861-7.635h2.939ZM246.595 41.319c-.894 0-1.697-.158-2.407-.474-.71-.329-1.276-.77-1.697-1.322a3.365 3.365 0 0 1-.67-1.835h2.781c.053.421.257.77.612 1.046.368.276.822.414 1.361.414.527 0 .934-.105 1.224-.315.302-.21.453-.48.453-.81 0-.354-.184-.617-.552-.788-.355-.184-.927-.382-1.716-.592-.816-.197-1.487-.401-2.013-.612a3.582 3.582 0 0 1-1.342-.967c-.368-.434-.552-1.019-.552-1.755 0-.606.171-1.158.513-1.658.355-.5.855-.894 1.499-1.184.658-.289 1.428-.434 2.309-.434 1.302 0 2.341.33 3.117.987.776.644 1.204 1.519 1.283 2.624h-2.644c-.04-.434-.224-.776-.553-1.026-.315-.263-.743-.395-1.282-.395-.5 0-.888.092-1.164.276a.887.887 0 0 0-.395.77c0 .368.184.651.553.848.368.184.94.375 1.716.573.789.197 1.44.4 1.953.611.513.21.954.54 1.322.987.382.434.579 1.013.592 1.736 0 .631-.177 1.197-.532 1.697-.342.5-.842.894-1.5 1.184-.644.276-1.401.414-2.269.414ZM256.38 32.48v5.287c0 .369.085.638.256.81.184.157.487.236.908.236h1.282v2.328h-1.736c-2.328 0-3.492-1.131-3.492-3.393V32.48h-1.302v-2.27h1.302v-2.702h2.782v2.703h2.446v2.269h-2.446ZM270.974 35.44c0 .394-.027.749-.079 1.065h-7.991c.066.789.342 1.407.829 1.854.487.447 1.085.671 1.795.671 1.026 0 1.756-.44 2.19-1.322h2.979c-.315 1.053-.92 1.92-1.815 2.605-.894.67-1.992 1.006-3.295 1.006-1.052 0-1.999-.23-2.841-.69a5.09 5.09 0 0 1-1.953-1.993c-.46-.855-.69-1.842-.69-2.96 0-1.131.23-2.124.69-2.98a4.815 4.815 0 0 1 1.934-1.972c.828-.46 1.782-.69 2.86-.69 1.04 0 1.967.223 2.782.67a4.625 4.625 0 0 1 1.914 1.914c.461.815.691 1.756.691 2.821Zm-2.861-.79c-.013-.71-.27-1.276-.77-1.697-.499-.434-1.111-.65-1.834-.65-.684 0-1.263.21-1.737.63-.46.408-.743.98-.848 1.717h5.189ZM286.564 30.053c1.342 0 2.42.414 3.236 1.243.828.816 1.243 1.96 1.243 3.433v6.412h-2.763v-6.037c0-.855-.217-1.506-.651-1.953-.434-.46-1.026-.69-1.775-.69-.75 0-1.348.23-1.796.69-.434.447-.651 1.098-.651 1.953v6.037h-2.762v-6.037c0-.855-.217-1.506-.651-1.953-.434-.46-1.026-.69-1.776-.69-.763 0-1.368.23-1.815.69-.434.447-.651 1.098-.651 1.953v6.037h-2.762v-10.93h2.762v1.322c.355-.46.809-.822 1.361-1.085a4.347 4.347 0 0 1 1.855-.395c.855 0 1.618.184 2.289.552.67.356 1.19.869 1.558 1.54a3.972 3.972 0 0 1 1.539-1.52 4.466 4.466 0 0 1 2.21-.572Z" fill="#fff"/><path d="M47.271 39.355h-24.55l2.604-4.202h19.341l2.605 4.202Z" fill="#BB2429"/><path d="m30.873 26.208-5.548 8.945-2.604 4.202-3.23 5.207H14.29L28.234 22.25l2.639 3.958ZM69.992 44.562H64.79L42.14 8.04l-4.613 7.44-2.531-4.048L42.141 0l27.85 44.562Z" fill="#fff"/><path d="M52.449 39.355h-5.178l-2.605-4.202L27.851 8.04 5.202 44.561H0L27.851 0l7.145 11.431 2.53 4.048L52.45 39.355Z" fill="#BB2429"/></svg>
+                <!-- svg ends -->
+              </b>
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <!-- <img
+                  src="assets/images/logo.png"
+                  alt="homepage"
+                  class="dark-logo"
+                  height="69px"
+                /> -->
+              </span>
+            </a>
+            <!-- -------------------------------------------------------------- -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- -------------------------------------------------------------- -->
+            <a
+              class="topbartoggler d-block d-md-none waves-effect waves-light"
+              href="javascript:void(0)"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i data-feather="more-horizontal" class="feather-sm"></i>
+            </a>
+          </div>
+          <!-- -------------------------------------------------------------- -->
+          <!-- End Logo -->
+          <!-- -------------------------------------------------------------- -->
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <!-- -------------------------------------------------------------- -->
+            <!-- toggle and nav items -->
+            <!-- -------------------------------------------------------------- -->
+            <ul class="navbar-nav me-auto d-none">
+              <!-- This is  -->
+              <li class="nav-item">
+                <a
+                  class="nav-link sidebartoggler d-none d-md-block waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  ><i data-feather="menu" class="feather-sm"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="search">
+              <input type="text" placeholder="Search..." />
+              <div class="search-icon d-flex gap-1 ms-2 gap-lg-2 ms-lg-3">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+            <!-- -------------------------------------------------------------- -->
+            <!-- Right side toggle and nav items -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- <ul class="navbar-nav align-items-center w-100"> -->
+            <ul class="navbar-nav align-items-center justify-content-end w-100">
+              <li class="nav-item">
+                <a
+                  class="nav-link d-none d-md-block waves-effect waves-dark device-min"
+                  href="#"
+                  >Plans and pricing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link d-none d-md-block waves-effect waves-dark"
+                  href="#"
+                  >Consulting</a
+                >
+              </li>
+              <li class="nav-item">
+                <button
+                  class="btn nav-link d-none d-md-block waves-effect waves-dark"
+                  id="btnSwitch"
+                >
+                  <img
+                    src="assets/images/icon/dark-light-mood.png"
+                    alt="dark-light-mood"
+                    class="image-fluid dark-switcher--light"
+                    height="18px"
+                    style="margin-top: -4px"
+                  />
+                  <img 
+                  src="assets/images/switch-dark.png" 
+                  height="18px"
+                  style="margin-top: -4px"
+                  class="dark-switcher--dark" alt="logo">
+                </button>
+              </li>
+
+              <!-- -------------------------------------------------------------- -->
+              <!-- Comment -->
+              <!-- -------------------------------------------------------------- -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i data-feather="bell"></i>
+                  <div class="notify">
+                    <span class="notify-count">
+                      <span>2</span>
+                    </span>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end mailbox dropdown-menu-animate-up"
+                >
+                  <ul class="list-style-none">
+                    <li>
+                      <div class="border-bottom rounded-top py-3 px-4">
+                        <div class="mb-0 font-weight-medium fs-4">
+                          Notifications
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="message-center notifications position-relative"
+                        style="height: 230px"
+                      >
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-danger text-danger btn-circle"
+                          >
+                            <i
+                              data-feather="link"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Luanch Admin
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just see the my new admin!</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:30 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-success text-success btn-circle"
+                          >
+                            <i
+                              data-feather="calendar"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Event today
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just a reminder that you have event</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:10 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span class="btn btn-light-info text-info btn-circle">
+                            <i
+                              data-feather="settings"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Settings
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >You can customize this template as you want</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:08 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-primary text-primary btn-circle"
+                          >
+                            <i
+                              data-feather="users"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Pavan kumar
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just see the my admin!</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:02 AM</span
+                            >
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        class="nav-link border-top text-center text-dark pt-3"
+                        href="javascript:void(0);"
+                      >
+                        <strong>Check all notifications</strong>
+                        <i data-feather="chevron-right" class="feather-sm"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- -------------------------------------------------------------- -->
+              <!-- End Comment -->
+              <!-- -------------------------------------------------------------- -->
+
+              <!-- -------------------------------------------------------------- -->
+
+              <!-- -------------------------------------------------------------- -->
+              <!-- Profile -->
+              <!-- -------------------------------------------------------------- -->
+              <li class="nav-item dropdown user-dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark user-pic"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/icon/user-pic.png"
+                    alt="user"
+                    width="34"
+                    class="profile-pic rounded-circle"
+                  />
+                  <span>Tamim Tanvir</span>
+                  <div class="down-arrow">
+                    <i class="fas fa-chevron-down" width="34"></i>
+                  </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end user-dd">
+                  <div
+                    class="d-flex no-block align-items-center p-3 bg-primary text-white mb-2"
+                  >
+                    <div class="">
+                      <img
+                        src="assets/images/icon/user-pic.png"
+                        alt="user"
+                        class="rounded-circle"
+                        width="60px"
+                      />
+                    </div>
+                    <div class="ms-2">
+                      <h4 class="mb-0 text-white">Steave Jobs</h4>
+                      <p class="mb-0">varun@gmail.com</p>
+                    </div>
+                  </div>
+                  <a class="dropdown-item" href="#">
+                    <i
+                      data-feather="user"
+                      class="feather-sm text-info me-1 ms-1"
+                    ></i>
+                    My Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i
+                      data-feather="credit-card"
+                      class="feather-sm text-primary me-1 ms-1"
+                    ></i>
+                    My Balance
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i
+                      data-feather="mail"
+                      class="feather-sm text-success me-1 ms-1"
+                    ></i>
+                    Inbox
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i
+                      data-feather="settings"
+                      class="feather-sm text-warning me-1 ms-1"
+                    ></i>
+                    Account Setting
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i
+                      data-feather="log-out"
+                      class="feather-sm text-danger me-1 ms-1"
+                    ></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- -------------------------------------------------------------- -->
+      <!-- End Topbar header -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- -------------------------------------------------------------- -->
+      <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav" class="w-100">
+              <li class="sidebar-item user-profile">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark user-box"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/users/profile.png"
+                    alt="user"
+                    class="m-0"
+                  />
+                  <div class="profile-left d-flex align-items-center gap-3">
+                    <div class="user-name">
+                      <h3 class="hide-menu">Royex Technologies</h3>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <img
+                      src="assets/images/users/arrow-up-down.png"
+                      alt="arrow-icon"
+                    />
+                  </div>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level p-4">
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0)" class="sidebar-link p-0">
+                      <span class="hide-menu">My Profile</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0)" class="sidebar-link p-0">
+                      <span class="hide-menu">My Balance</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0)" class="sidebar-link p-0">
+                      <span class="hide-menu">Inbox</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="javascript:void(0)" class="sidebar-link p-0">
+                      <span class="hide-menu">Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark sidebar-link--dashboard"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="none"
+                  >
+                    <mask
+                      id="a"
+                      width="25"
+                      height="25"
+                      x="0"
+                      y="0"
+                      maskUnits="userSpaceOnUse"
+                      style="mask-type: alpha"
+                    >
+                      <path fill="#D9D9D9" d="M.5.977h24v24H.5z" />
+                    </mask>
+                    <g mask="url(#a)">
+                      <path
+                        fill="#343A40"
+                        d="M5.5 21.977c-.55 0-1.02-.196-1.412-.588a1.926 1.926 0 0 1-.588-1.412v-14c0-.55.196-1.021.588-1.413A1.926 1.926 0 0 1 5.5 3.977h14c.55 0 1.02.195 1.413.587.391.392.587.863.587 1.413v14c0 .55-.196 1.02-.587 1.412a1.926 1.926 0 0 1-1.413.588h-14Zm0-2h6v-14h-6v14Zm8 0h6v-7h-6v7Zm0-9h6v-5h-6v5Z"
+                      />
+                    </g>
+                  </svg>
+                  <span class="hide-menu">Dashboard</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="21"
+                    fill="none"
+                  >
+                    <path
+                      fill="#343A40"
+                      d="M18.648 12.447h2V5.97a1.947 1.947 0 0 0-.85-1.625l-5-3.575a1.936 1.936 0 0 0-1.15-.375c-.416 0-.8.125-1.15.375l-5 3.575a1.94 1.94 0 0 0-.85 1.625v1.475h2v-1.5l5-3.5 5 3.5v6.5Zm-4-6a.48.48 0 0 1-.35-.15.48.48 0 0 1 0-.7.48.48 0 0 1 .7 0 .48.48 0 0 1 0 .7.48.48 0 0 1-.35.15Zm-2 0a.48.48 0 0 1-.35-.15.48.48 0 0 1 0-.7.48.48 0 0 1 .7 0 .48.48 0 0 1 0 .7.48.48 0 0 1-.35.15Zm2 2a.48.48 0 0 1-.35-.15.48.48 0 0 1 0-.7.48.48 0 0 1 .7 0 .48.48 0 0 1 0 .7.48.48 0 0 1-.35.15Zm-2 0a.48.48 0 0 1-.35-.15.48.48 0 0 1 0-.7.48.48 0 0 1 .7 0 .48.48 0 0 1 0 .7.48.48 0 0 1-.35.15Zm.95 10.4 5.95-1.85a1.141 1.141 0 0 0-.362-.388.93.93 0 0 0-.538-.163h-5.05a9.1 9.1 0 0 1-1.075-.05 3.955 3.955 0 0 1-.825-.2l-1.425-.475a.905.905 0 0 1-.575-.5 1.04 1.04 0 0 1-.05-.774.955.955 0 0 1 .488-.588.97.97 0 0 1 .762-.063l1.05.35c.284.084.605.15.963.2.358.05.846.084 1.462.1h.275a.948.948 0 0 0-.162-.524.753.753 0 0 0-.388-.325l-5.85-2.15h-1.6v5.5l6.95 1.9Zm-.525 1.95-6.425-1.8a1.93 1.93 0 0 1-.787 1.05c-.392.266-.796.4-1.213.4h-2c-.55 0-1.02-.196-1.412-.588a1.926 1.926 0 0 1-.588-1.413v-7c0-.55.196-1.02.588-1.412a1.926 1.926 0 0 1 1.412-.588h5.6c.117 0 .234.013.35.038.117.025.225.054.325.087l5.875 2.175c.55.2.996.55 1.338 1.05.342.5.512 1.05.512 1.65h2c.834 0 1.542.276 2.125.825.584.55.875 1.276.875 2.175 0 .367-.095.655-.287.863-.192.208-.488.38-.888.512l-6.25 1.95c-.183.067-.375.1-.575.1-.2 0-.391-.024-.575-.074Zm-10.425-2.35h2v-7h-2v7Z"
+                    />
+                  </svg>
+                  <span class="hide-menu">Properites</span>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="entry-list.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Master List</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="entry-name.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Products</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="19"
+                    fill="none"
+                  >
+                    <path
+                      fill="#343A40"
+                      d="M2.5 18.977c-.55 0-1.02-.196-1.413-.588A1.926 1.926 0 0 1 .5 16.977v-14c0-.55.196-1.021.587-1.413A1.926 1.926 0 0 1 2.5.977h6c.55 0 1.02.195 1.412.587.392.392.588.863.588 1.413v2h8c.55 0 1.02.195 1.413.587.391.392.587.863.587 1.413v10c0 .55-.196 1.02-.587 1.412a1.926 1.926 0 0 1-1.413.588h-16Zm0-2h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2v-2h-2v2Zm4 12h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2v-2h-2v2Zm0-4h2v-2h-2v2Zm4 12h8v-10h-8v2h2v2h-2v2h2v2h-2v2Zm4-6v-2h2v2h-2Zm0 4v-2h2v2h-2Z"
+                    />
+                  </svg>
+                  <span class="hide-menu">Booking</span>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="entry-list.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Booking List</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="entry-name.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">New Booking</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="entry-name.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Guest List</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="15"
+                    fill="none"
+                  >
+                    <path
+                      fill="#1C1B1F"
+                      d="M2.5 14.977c-.55 0-1.02-.196-1.413-.588A1.926 1.926 0 0 1 .5 12.977v-10c0-.55.196-1.021.587-1.413A1.926 1.926 0 0 1 2.5.977h10c.55 0 1.02.195 1.412.587.392.392.588.863.588 1.413v10c0 .55-.196 1.02-.588 1.412a1.926 1.926 0 0 1-1.412.588h-10Zm0-3.65a9.78 9.78 0 0 1 2.35-1 9.784 9.784 0 0 1 2.65-.35c.933 0 1.817.116 2.65.35a9.78 9.78 0 0 1 2.35 1v-8.35h-10v8.35Zm5 .65c-.683 0-1.35.083-2 .25a7.429 7.429 0 0 0-1.85.75h7.7a7.428 7.428 0 0 0-1.85-.75 8.019 8.019 0 0 0-2-.25Zm0-2.75c-.75 0-1.396-.271-1.938-.813-.541-.542-.812-1.187-.812-1.937s.27-1.396.813-1.938c.541-.542 1.187-.812 1.937-.812s1.396.27 1.938.812c.541.542.812 1.188.812 1.938s-.27 1.395-.813 1.937c-.541.542-1.187.813-1.937.813Zm0-1.85c.25 0 .463-.088.637-.263a.868.868 0 0 0 .263-.637.868.868 0 0 0-.263-.638.868.868 0 0 0-.637-.262.868.868 0 0 0-.638.262.868.868 0 0 0-.262.638c0 .25.088.462.263.637a.868.868 0 0 0 .637.263Zm10 7.6a.968.968 0 0 1-.712-.288.968.968 0 0 1-.288-.712v-12c0-.284.096-.521.288-.713A.968.968 0 0 1 17.5.977c.283 0 .52.095.712.287.192.192.288.43.288.713v12c0 .283-.096.52-.288.712a.968.968 0 0 1-.712.288Zm4 0a.968.968 0 0 1-.712-.288.968.968 0 0 1-.288-.712v-12c0-.284.096-.521.288-.713A.968.968 0 0 1 21.5.977c.283 0 .52.095.712.287.192.192.288.43.288.713v12c0 .283-.096.52-.288.712a.968.968 0 0 1-.712.288Z"
+                    />
+                  </svg>
+                  <span class="hide-menu">CRM</span>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Category</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="17"
+                    fill="none"
+                  >
+                    <path
+                      fill="#343A40"
+                      d="M1.5 16.977a.968.968 0 0 1-.713-.288.968.968 0 0 1-.287-.712v-1.8c0-.567.146-1.088.438-1.563.291-.475.679-.837 1.162-1.087a14.843 14.843 0 0 1 3.15-1.163 13.755 13.755 0 0 1 3.25-.387c1.1 0 2.183.129 3.25.387 1.067.258 2.117.646 3.15 1.163.483.25.87.612 1.162 1.087.292.475.438.996.438 1.563v1.8c0 .283-.096.52-.288.712a.968.968 0 0 1-.712.288h-14Zm16.525 0c.15-.117.267-.263.35-.438a1.35 1.35 0 0 0 .125-.587v-1.975c0-.734-.204-1.438-.613-2.113-.408-.675-.987-1.254-1.737-1.737a12.507 12.507 0 0 1 4.5 1.4c.6.333 1.058.704 1.375 1.112.317.408.475.854.475 1.338v2c0 .283-.096.52-.288.712a.968.968 0 0 1-.712.288h-3.475Zm-9.525-8c-1.1 0-2.042-.392-2.825-1.175C4.892 7.018 4.5 6.077 4.5 4.977s.392-2.042 1.175-2.825C6.458 1.368 7.4.977 8.5.977s2.042.391 2.825 1.175c.783.783 1.175 1.725 1.175 2.825s-.392 2.041-1.175 2.825C10.542 8.585 9.6 8.977 8.5 8.977Zm10-4c0 1.1-.392 2.041-1.175 2.825-.783.783-1.725 1.175-2.825 1.175-.183 0-.417-.021-.7-.063a6.12 6.12 0 0 1-.7-.137 5.947 5.947 0 0 0 1.037-1.775c.242-.65.363-1.325.363-2.025s-.12-1.375-.363-2.025A5.948 5.948 0 0 0 13.1 1.177a3.04 3.04 0 0 1 .7-.163c.233-.025.467-.037.7-.037 1.1 0 2.042.391 2.825 1.175.783.783 1.175 1.725 1.175 2.825Zm-16 10h12v-.8a.973.973 0 0 0-.5-.85c-.9-.45-1.808-.788-2.725-1.013a11.6 11.6 0 0 0-5.55 0c-.917.225-1.825.563-2.725 1.013a.973.973 0 0 0-.5.85v.8Zm6-8c.55 0 1.02-.196 1.412-.588.392-.392.588-.862.588-1.412 0-.55-.196-1.021-.588-1.413A1.926 1.926 0 0 0 8.5 2.977c-.55 0-1.02.195-1.412.587A1.926 1.926 0 0 0 6.5 4.977c0 .55.196 1.02.588 1.412.391.392.862.588 1.412.588Z"
+                    />
+                  </svg>
+                  <span class="hide-menu">Tenant</span>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="22"
+                    fill="none"
+                  >
+                    <path
+                      fill="#1C1B1F"
+                      d="M17.35 21.952c-.133 0-.258-.021-.375-.063a.877.877 0 0 1-.325-.212l-5.1-5.1a.878.878 0 0 1-.213-.325 1.106 1.106 0 0 1-.062-.375c0-.134.02-.259.063-.375a.877.877 0 0 1 .212-.325l2.125-2.125c.1-.1.208-.171.325-.213.117-.042.242-.062.375-.062s.258.02.375.062a.876.876 0 0 1 .325.213l5.1 5.1c.1.1.17.208.212.325.042.116.063.241.063.375 0 .133-.02.258-.063.375a.878.878 0 0 1-.212.325l-2.125 2.125c-.1.1-.208.17-.325.212a1.109 1.109 0 0 1-.375.063Zm0-2.375.725-.725-3.675-3.675-.725.725 3.675 3.675Zm-13.725 2.4c-.133 0-.263-.025-.388-.075a.999.999 0 0 1-.337-.225l-2.1-2.1a.999.999 0 0 1-.225-.338 1.034 1.034 0 0 1-.075-.387c0-.134.025-.259.075-.375.05-.117.125-.225.225-.325l5.3-5.3h2.125l.85-.85L4.95 7.877H3.525L.5 4.852l2.825-2.825L6.35 5.052v1.425l4.125 4.125 2.9-2.9L12.3 6.627l1.4-1.4h-2.825l-.7-.7 3.55-3.55.7.7v2.825l1.4-1.4 3.55 3.55a2.916 2.916 0 0 1 .875 2.1c0 .4-.075.783-.225 1.15-.15.366-.367.691-.65.975L17.25 8.752l-1.4 1.4-1.05-1.05-5.175 5.175v2.1l-5.3 5.3c-.1.1-.208.175-.325.225a.942.942 0 0 1-.375.075Zm0-2.4 4.25-4.25v-.725H7.15l-4.25 4.25.725.725Zm0 0-.725-.725.375.35.35.375Z"
+                    />
+                  </svg>
+                  <span class="hide-menu">Maintenance</span>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Category</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="17"
+                    fill="none"
+                  >
+                    <path
+                      fill="#1C1B1F"
+                      d="M5.5 12.977c.283 0 .52-.096.713-.288a.968.968 0 0 0 .287-.712.967.967 0 0 0-.287-.713.967.967 0 0 0-.713-.287.967.967 0 0 0-.713.287.967.967 0 0 0-.287.713c0 .283.096.52.287.712.192.192.43.288.713.288Zm0-3c.283 0 .52-.096.713-.288a.968.968 0 0 0 .287-.712v-3a.968.968 0 0 0-.287-.713.968.968 0 0 0-.713-.287.968.968 0 0 0-.713.287.968.968 0 0 0-.287.713v3c0 .283.096.52.287.712.192.192.43.288.713.288Zm4 2h6c.283 0 .52-.096.712-.288a.968.968 0 0 0 .288-.712.967.967 0 0 0-.288-.713.968.968 0 0 0-.712-.287h-6a.968.968 0 0 0-.713.287.967.967 0 0 0-.287.713c0 .283.096.52.287.712.192.192.43.288.713.288Zm0-4h6c.283 0 .52-.096.712-.288a.967.967 0 0 0 .288-.712.967.967 0 0 0-.288-.713.968.968 0 0 0-.712-.287h-6a.968.968 0 0 0-.713.287.968.968 0 0 0-.287.713c0 .283.096.52.287.712.192.192.43.288.713.288Zm-7 9c-.55 0-1.02-.196-1.413-.588A1.926 1.926 0 0 1 .5 14.977v-12c0-.55.196-1.021.587-1.413A1.926 1.926 0 0 1 2.5.977h16c.55 0 1.02.195 1.413.587.391.392.587.863.587 1.413v12c0 .55-.196 1.02-.587 1.412a1.926 1.926 0 0 1-1.413.588h-16Zm0-2h16v-12h-16v12Z"
+                    />
+                  </svg>
+                  <span class="hide-menu">Reports</span>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    height="20"
+                    fill="none"
+                  >
+                    <path
+                      fill="#1C1B1F"
+                      d="M8.5 10.977c-.983 0-1.813-.338-2.487-1.013C5.338 9.29 5 8.46 5 7.477c0-.983.338-1.813 1.013-2.488.675-.675 1.504-1.012 2.487-1.012.983 0 1.813.337 2.488 1.012S12 6.494 12 7.477c0 .983-.338 1.812-1.012 2.487-.675.675-1.505 1.013-2.488 1.013Zm0-2c.433 0 .792-.142 1.075-.425.283-.283.425-.642.425-1.075 0-.433-.142-.792-.425-1.075-.283-.283-.642-.425-1.075-.425-.433 0-.792.142-1.075.425C7.142 6.685 7 7.044 7 7.477c0 .433.142.792.425 1.075.283.283.642.425 1.075.425Zm0-6.875-6 2.25v4.725c0 .9.125 1.775.375 2.625.25.85.592 1.65 1.025 2.4.7-.35 1.433-.625 2.2-.825a9.47 9.47 0 0 1 2.4-.3c.833 0 1.633.1 2.4.3.767.2 1.5.475 2.2.825.433-.75.775-1.55 1.025-2.4.25-.85.375-1.725.375-2.625V4.352l-6-2.25Zm0 12.875c-.6 0-1.183.067-1.75.2a8.87 8.87 0 0 0-1.625.55c.483.5 1.008.933 1.575 1.3s1.167.65 1.8.85a7.408 7.408 0 0 0 1.8-.85 8.946 8.946 0 0 0 1.575-1.3 8.87 8.87 0 0 0-1.625-.55 7.611 7.611 0 0 0-1.75-.2Zm0 4.9c-.117 0-.225-.008-.325-.025s-.2-.042-.3-.075c-2.25-.75-4.042-2.137-5.375-4.163-1.333-2.025-2-4.204-2-6.537V4.352c0-.417.12-.792.363-1.125.241-.333.554-.575.937-.725l6-2.25a2.07 2.07 0 0 1 .7-.125c.233 0 .467.042.7.125l6 2.25c.383.15.696.392.938.725.241.333.362.708.362 1.125v4.725c0 2.333-.667 4.512-2 6.537-1.333 2.026-3.125 3.413-5.375 4.163-.1.033-.2.058-.3.075-.1.017-.208.025-.325.025Z"
+                    />
+                  </svg>
+                  <span class="hide-menu">System</span>
+                </a>
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Brand</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="new-entry.html" class="sidebar-link">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="hide-menu">Product Settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul id="sidebarnav2" class="sidebarnav2 w-100">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/icon/billing.png"
+                    alt="credit_card"
+                    class="img-fluid"
+                  />
+                  <span class="hide-menu">Accounts Billing</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/icon/consulting.png"
+                    alt="person"
+                    class="img-fluid"
+                  />
+                  <span class="hide-menu">Consulting services</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/icon/support.png"
+                    alt="support"
+                    class="img-fluid"
+                  />
+                  <span class="hide-menu">Support</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/icon/knowledge.png"
+                    alt="knowledge-img"
+                    class="img-fluid"
+                  />
+                  <span class="hide-menu">Knowledge Base</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <div class="powered-by">
+                    <span>Powered by</span>
+                    <img
+                      src="assets/images/icon/royex-logo.png"
+                      alt="royex-logo"
+                      class="img-fluid"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <!-- -------------------------------------------------------------- -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- Page wrapper  -->
+      <!-- -------------------------------------------------------------- -->
+      <div class="page-wrapper">
+        <!-- -------------------------------------------------------------- -->
+        <!-- Container fluid  -->
+        <!-- -------------------------------------------------------------- -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-5 col-12 align-self-center">
+              <div class="section-title">
+                <h3 class="text-themecolor mb-0">Booking List</h3>
+              </div>
+            </div>
+          </div>
+          <main class="booking">
+            <figure class="bannar">
+              <div class="row">
+                <div class="col-lg-8">
+                  <img
+                    src="assets/images/bannar-building.png"
+                    class="img-fluid bannar-building"
+                    alt="building-image"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <div>
+                    <img
+                      src="assets/images/showcase-building-1.png"
+                      class="img-fluid bannar-building-right"
+                      alt="showcase-img-1"
+                    />
+                    <img
+                      src="assets/images/showcase-building-2.png"
+                      class="img-fluid bannar-building-right mt-5"
+                      alt="showcase-img-2"
+                    />
+                  </div>
+                </div>
+              </div>
+              <figcaption
+                class="d-flex justify-content-between align-items-center mt-5"
+              >
+                <div class="rating">
+                  <h2>Beautiful single home</h2>
+                  <div class="rating-span d-flex align-items-center mt-2 gap-3">
+                    <span class="rating-point">
+                      4.9
+                      <img
+                        src="assets/images/rating/star-on.png"
+                        alt="star-icon"
+                        height="18"
+                      />
+                    </span>
+                    <span class="rating-right">
+                      Statn island, Dubai, UAE |
+                      <span>Reference</span>
+                      EH- R - BL10
+                    </span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="price">
+                    240.00 AED
+                    <span style="font-size: 1.8rem">/day</span>
+                  </span>
+                </div>
+              </figcaption>
+            </figure>
+            <!-- BANNAR IMAGE ENDS -->
+            <section class="book">
+              <div class="row">
+                <!-- left part -->
+                <div class="col-lg-7">
+                  <div class="home-description">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Viverra
+                      suspendisse elementum enim diam ultrices. Cursus tincidunt
+                      blandit nibh vulputate gravida in leo porta. Tortor orci
+                      egestas posuere at. Sit senectus ac semper integer morbi
+                      tellus fringilla.Lorem ipsum dolor sit amet consectetur.
+                      Viverra suspendisse elementum enim diam ultrices. Cursus
+                      tincidunt blandit nibh vulputate gravida in leo porta.
+                      Tortor orci egestas posuere at. Sit senectus ac semper
+                      integer morbi tellus fringilla.Lorem ipsum dolor sit amet
+                      consectetur. Viverra suspendisse elementum enim diam
+                      ultrices. Cursus tincidunt blandit nibh vulputate gravida
+                      in leo porta. Tortor orci egestas posuere at. Sit senectus
+                      ac semper integer morbi tellus fringilla.Lorem ipsum dolor
+                      sit amet consectetur. Viverra suspendisse elementum enim
+                      diam ultrices. Cursus tincidunt blandit nibh vulputate
+                      gravida in leo porta. Tortor orci egestas posuere at. Sit
+                      senectus ac semper integer morbi tellus fringilla.
+                    </p>
+                  </div>
+                  <div class="feature-block">
+                    <h2 class="feature-block-heading">Features</h2>
+                    <div class="feature d-flex align-items-center gap-4">
+                      <div class="agent-icon-part">
+                        <img
+                          src="assets/images/icon/apartment-icon.png"
+                          alt="apartment-icon"
+                        />
+                      </div>
+                      <div>
+                        <p>Entire Home</p>
+                        <p class="feature-description">
+                          You’ll gave the tree house to yourself
+                        </p>
+                      </div>
+                    </div>
+                    <div class="feature d-flex align-items-center gap-4">
+                      <div class="agent-icon-part">
+                        <img
+                          src="assets/images/icon/apartment-icon.png"
+                          alt="apartment-icon"
+                        />
+                      </div>
+                      <div>
+                        <p>Entire Home</p>
+                        <p class="feature-description">
+                          You’ll gave the tree house to yourself
+                        </p>
+                      </div>
+                    </div>
+                    <div class="feature d-flex align-items-center gap-4">
+                      <div class="agent-icon-part">
+                        <img
+                          src="assets/images/icon/apartment-icon.png"
+                          alt="apartment-icon"
+                        />
+                      </div>
+                      <div>
+                        <p>Entire Home</p>
+                        <p class="feature-description">
+                          You’ll gave the tree house to yourself
+                        </p>
+                      </div>
+                    </div>
+                    <div class="feature d-flex align-items-center gap-4">
+                      <div class="agent-icon-part">
+                        <img
+                          src="assets/images/icon/apartment-icon.png"
+                          alt="apartment-icon"
+                        />
+                      </div>
+                      <div>
+                        <p>Entire Home</p>
+                        <p class="feature-description">
+                          You’ll gave the tree house to yourself
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="amenities-block">
+                    <h2 class="amenities-block-heading">Features</h2>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Double deluxe king bed</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Quadruple 2 double beds</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 my-5">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Suite 2 queen beds</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 my-5">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Double superior king bed</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Twin 2 double beds</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Junior suite</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 my-5">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Double deluxe</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 my-5">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Suite exclusive king bed</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Suite exclusive king bed</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="feature d-flex align-items-center gap-4">
+                          <div class="agent-icon-part">
+                            <img
+                              src="assets/images/icon/add-home-icon.png"
+                              alt="add-home-icon"
+                            />
+                          </div>
+                          <p>Superior king bed</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- left part ends-->
+                <!-- right part -->
+                <div class="col-lg-5">
+                  <div class="book-card">
+                    <div class="book-card date-in">
+                      <span class="book-span">Date in</span>
+                      <p class="book-paragraph">5 Octobor 2020</p>
+                    </div>
+                    <div class="book-card date-out">
+                      <span class="book-span">Date out</span>
+                      <p class="book-paragraph">15 Octobor 2020</p>
+                    </div>
+                    <div class="book-card guest">
+                      <span class="book-span">Number of guest</span>
+                      <p class="book-paragraph">Guest</p>
+                    </div>
+                    <div
+                      class="book-charge d-flex justify-content-between align-items-center"
+                    >
+                      <div class="charge-title d-flex flex-column gap-3">
+                        <p>
+                          <strong>35x</strong>
+                          <span>10 night</span>
+                        </p>
+                        <p>Cleaning fee</p>
+                        <p>Service fee</p>
+                      </div>
+                      <div class="charge-price">
+                        <p>350.00</p>
+                        <p>25.50</p>
+                        <p>35.50</p>
+                      </div>
+                    </div>
+
+                    <p class="charge-total">410.00</p>
+                    <a href="#" class="book-btn">Book Now</a>
+                  </div>
+                  <div class="contact-agent px-5">
+                    <h2 class="agent">Contact Agent</h2>
+                    <div class="agent-profile d-flex align-items-center gap-4">
+                      <div class="profile-part">
+                        <img
+                          src="assets/images/agent-profile.png"
+                          alt="profile-image"
+                        />
+                      </div>
+                      <div class="profile-title-part">
+                        <h2 class="profile-name">John Dowson</h2>
+                        <p class="profile-designation">Real Estate Agent</p>
+                      </div>
+                    </div>
+                    <p class="agent-details">
+                      Lorem ipsum dolor sit amet consectetur. Viverra
+                      suspendisse elementum enim diam ultrices. Cursus tincidunt
+                      blandit nibh vulputate gravida in leo porta. Tortor orci
+                      egestas posuere at. Sit senectus ac semper intege
+                    </p>
+                    <div class="feature d-flex align-items-center gap-4">
+                      <div class="agent-icon-part">
+                        <img
+                          src="assets/images/icon/eye-lock-icon.png"
+                          alt="eye-lock-icon"
+                        />
+                      </div>
+                      <p>Quadruple 2 double beds</p>
+                    </div>
+                    <div class="feature d-flex align-items-center gap-4 my-5">
+                      <div class="agent-icon-part">
+                        <img
+                          src="assets/images/icon/eye-lock-icon.png"
+                          alt="eye-lock-icon"
+                        />
+                      </div>
+                      <p>Quadruple 2 double beds</p>
+                    </div>
+                    <div class="feature d-flex align-items-center gap-4">
+                      <div class="agent-icon-part">
+                        <img
+                          src="assets/images/icon/eye-lock-icon.png"
+                          alt="eye-lock-icon"
+                        />
+                      </div>
+                      <p>Quadruple 2 double beds</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- right part ends -->
+              </div>
+            </section>
+            <!-- BOOK SECTION ENDS -->
+            <section class="review">
+              <div class="review-container">
+                <h2 class="review-title">Reviews</h2>
+                <div class="client-reviews">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center gap-5">
+                        <div class="profile-part">
+                          <img
+                            src="assets/images/client-1.png"
+                            alt="profile-image"
+                          />
+                        </div>
+                        <div class="profile-title-part">
+                          <h2 class="profile-name">Darrell Steward</h2>
+                          <p class="profile-designation">Client</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <p class="review-description">
+                        Lorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        integeLorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        intege
+                      </p>
+                    </div>
+                    <div class="col-lg-1">
+                      <span class="rating-point">
+                        4.9
+                        <img
+                          src="assets/images/rating/star-on.png"
+                          alt="star-icon"
+                          height="18"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="client-reviews">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center gap-5">
+                        <div class="profile-part">
+                          <img
+                            src="assets/images/client-2.png"
+                            alt="profile-image"
+                          />
+                        </div>
+                        <div class="profile-title-part">
+                          <h2 class="profile-name">Theresa Webb</h2>
+                          <p class="profile-designation">Client</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <p class="review-description">
+                        Lorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        integeLorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        intege
+                      </p>
+                    </div>
+                    <div class="col-lg-1">
+                      <span class="rating-point">
+                        4.9
+                        <img
+                          src="assets/images/rating/star-on.png"
+                          alt="star-icon"
+                          height="18"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="client-reviews">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center gap-5">
+                        <div class="profile-part">
+                          <img
+                            src="assets/images/client-3.png"
+                            alt="profile-image"
+                          />
+                        </div>
+                        <div class="profile-title-part">
+                          <h2 class="profile-name">Brooklyn Simmons</h2>
+                          <p class="profile-designation">Client</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <p class="review-description">
+                        Lorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        integeLorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        intege
+                      </p>
+                    </div>
+                    <div class="col-lg-1">
+                      <span class="rating-point">
+                        4.9
+                        <img
+                          src="assets/images/rating/star-on.png"
+                          alt="star-icon"
+                          height="18"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="client-reviews">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center gap-5">
+                        <div class="profile-part">
+                          <img
+                            src="assets/images/client-4.png"
+                            alt="profile-image"
+                          />
+                        </div>
+                        <div class="profile-title-part">
+                          <h2 class="profile-name">Ralph Edwards</h2>
+                          <p class="profile-designation">Client</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <p class="review-description">
+                        Lorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        integeLorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        intege
+                      </p>
+                    </div>
+                    <div class="col-lg-1">
+                      <span class="rating-point">
+                        4.9
+                        <img
+                          src="assets/images/rating/star-on.png"
+                          alt="star-icon"
+                          height="18"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="client-reviews">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center gap-5">
+                        <div class="profile-part">
+                          <img
+                            src="assets/images/client-5.png"
+                            alt="profile-image"
+                          />
+                        </div>
+                        <div class="profile-title-part">
+                          <h2 class="profile-name">Kathryn Murphy</h2>
+                          <p class="profile-designation">Client</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <p class="review-description">
+                        Lorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        integeLorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        intege
+                      </p>
+                    </div>
+                    <div class="col-lg-1">
+                      <span class="rating-point">
+                        4.9
+                        <img
+                          src="assets/images/rating/star-on.png"
+                          alt="star-icon"
+                          height="18"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="client-reviews">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center gap-5">
+                        <div class="profile-part">
+                          <img
+                            src="assets/images/client-6.png"
+                            alt="profile-image"
+                          />
+                        </div>
+                        <div class="profile-title-part">
+                          <h2 class="profile-name">Esther Howard</h2>
+                          <p class="profile-designation">Client</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <p class="review-description">
+                        Lorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        integeLorem ipsum dolor sit amet consectetur. Viverra
+                        suspendisse elementum enim diam ultrices. Cursus
+                        tincidunt blandit nibh vulputate gravida in leo porta.
+                        Tortor orci egestas posuere at. Sit senectus ac semper
+                        intege
+                      </p>
+                    </div>
+                    <div class="col-lg-1">
+                      <span class="rating-point">
+                        4.9
+                        <img
+                          src="assets/images/rating/star-on.png"
+                          alt="star-icon"
+                          height="18"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- End Container fluid  -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- footer -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- <footer class="footer text-center">
+          All Rights Reserved by Adminpro admin.
+        </footer> -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- End footer -->
+        <!-- -------------------------------------------------------------- -->
+      </div>
+      <!-- -------------------------------------------------------------- -->
+      <!-- End Page wrapper  -->
+      <!-- -------------------------------------------------------------- -->
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- End Wrapper -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- All Jquery -->
+    <!-- -------------------------------------------------------------- -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- apps -->
+    <script src="assets/dist/js/app.min.js"></script>
+    <script src="assets/dist/js/app.init.minimal.js"></script>
+    <script src="assets/dist/js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="assets/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="assets/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="assets/dist/js/feather.min.js"></script>
+    <script src="assets/dist/js/custom.min.js"></script>
+    <script>
+      // theme switch example for demo
+      document.getElementById("btnSwitch").addEventListener("click", () => {
+        // console.log('hi , your used duplicate script')
+        const navBrand = document.querySelector('.navbar-brand');
+        navBrand.classList.toggle('active');
+        document.getElementById("btnSwitch").classList.toggle('active');
+        if (document.body.classList.contains("dark")) {
+          document.body.classList.remove("dark");
+        } else {
+          document.body.classList.add("dark");
+        }
+      });
+    </script>
+  </body>
+</html>
