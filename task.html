@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROPERTY MANAGEMENT SYSTEM</title>
-
-    <!-- Favicon icon -->
     <link
       rel="icon"
       type="image/png"
@@ -25,21 +21,7 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/dropzone.css" />
   </head>
-
   <body>
-    <!-- -------------------------------------------------------------- -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- -------------------------------------------------------------- -->
-    <div class="preloader">
-      <img
-        src="assets/img/favicon.png"
-        alt="loading-img"
-        class="img-fluid loading-img"
-      />
-    </div>
-    <!-- -------------------------------------------------------------- -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- -------------------------------------------------------------- -->
     <div id="main-wrapper">
       <!-- -------------------------------------------------------------- -->
       <!-- Topbar header - style you can find in pages.scss -->
@@ -68,11 +50,11 @@
               <span class="logo-text">
                 <!-- dark Logo text -->
                 <!-- <img
-                  src="assets/images/logo.png"
-                  alt="homepage"
-                  class="dark-logo"
-                  height="69px"
-                /> -->
+                    src="assets/images/logo.png"
+                    alt="homepage"
+                    class="dark-logo"
+                    height="69px"
+                  /> -->
               </span>
             </a>
             <!-- -------------------------------------------------------------- -->
@@ -821,701 +803,33 @@
       <div class="page-wrapper">
         <div class="container-fluid">
           <section class="section entry-list-section" id="entry-list-section">
-            <div class="row">
-              <div class="col-lg-3 col-md-5 px-4 px-sm-2">
-                <div class="section-title d-flex justify-content-between">
-                  <h3 class="category-heading mb-0">Booking List</h3>
-                  <div class="upload-area d-flex align-items-start gap-3 me-2">
-                    <div class="btn-add btn-customer">
-                      <i class="fas fa-plus" style="font-weight: 400"></i>
-                    </div>
-                    <div class="upload-icon ellipsh-icon">
-                      <i class="fas fa-ellipsis-h"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="search-booking-details mt-5">
-                  <div class="search">
-                    <input
-                      type="text"
-                      placeholder="Search..."
-                      fdprocessedid="ndyc7"
-                    />
-                    <div class="search-icon d-flex gap-1 ms-2 gap-lg-2 ms-lg-3">
-                      <i class="fas fa-search"></i>
-                    </div>
-                  </div>
-                  <div class="booking-profile-part">
-                    <div class="profile-lines d-flex align-items-center gap-4">
-                      <div class="profile-part">
-                        <img
-                          src="assets/images/profile-1.png"
-                          alt="profile-image"
-                        />
-                      </div>
-                      <div class="profile-title-part">
-                        <h2 class="profile-name">John Dowson</h2>
-                        <p class="profile-designation">Real Estate Agent</p>
-                      </div>
-                    </div>
-                    <div class="profile-lines d-flex align-items-center gap-4">
-                      <div class="profile-part">
-                        <img
-                          src="assets/images/profile-2.png"
-                          alt="profile-image"
-                        />
-                      </div>
-                      <div class="profile-title-part">
-                        <h2 class="profile-name">John Dowson</h2>
-                        <p class="profile-designation">Real Estate Agent</p>
-                      </div>
-                    </div>
-                    <div class="profile-lines d-flex align-items-center gap-4">
-                      <div class="profile-part">
-                        <img
-                          src="assets/images/profile-3.png"
-                          alt="profile-image"
-                        />
-                      </div>
-                      <div class="profile-title-part">
-                        <h2 class="profile-name">John Dowson</h2>
-                        <p class="profile-designation">Real Estate Agent</p>
-                      </div>
-                    </div>
-                    <div class="profile-lines d-flex align-items-center gap-4">
-                      <div class="profile-part">
-                        <img
-                          src="assets/images/profile-4.png"
-                          alt="profile-image"
-                        />
-                      </div>
-                      <div class="profile-title-part">
-                        <h2 class="profile-name">John Dowson</h2>
-                        <p class="profile-designation">Real Estate Agent</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="d-flex align-items-center">
+              <h1>Task List</h1>
+              <div class="ms-auto d-flex">
+                <h5>Change View</h5>
               </div>
-
-              <div class="col-lg-9 col-md-7">
-                <div class="booking-details mb-5">
-                  <p class="booking-details-heading">Booking Details</p>
-                  <div
-                    class="details-card d-flex justify-content-between align-items-center card-line"
-                  >
-                    <div class="details-left">
-                      <p>
-                        <span class="name-label">Name:</span>
-                        <span class="name-title">Leslie Alexander</span>
-                      </p>
-                      <div class="room-details">
-                        <div>
-                          <span>Room No</span>
-                          <p>Deluxe Double With Balcony</p>
-                        </div>
-                        <div>
-                          <span>Contact No</span>
-                          <p>+09 93350 5666 94</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="details-right d-flex gap-4">
-                      <div>
-                        <div class="btn-check btn-check--in">
-                          <a href="#">Check In</a>
-                        </div>
-                        <p style="font-weight: 400; margin-top: 5px">
-                          July 12, 2023 | 15:40 PM
-                        </p>
-                      </div>
-                      <div>
-                        <div class="btn-check btn-check--out">
-                          <a href="#">Check Out</a>
-                        </div>
-                        <p style="font-weight: 400; margin-top: 5px">
-                          July 12, 2023 | 15:40 PM
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tab-box">
-                  <!-- Nav tabs -->
-                  <div class="tab-nav mx-auto mx-sm-0">
-                    <ul class="nav nav-pills" role="tablist">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link nav-link--category active"
-                          data-bs-toggle="tab"
-                          href="#navpill-1"
-                          role="tab"
-                        >
-                          <span class="category-nav-span">Booking</span>
-                        </a>
-                      </li>
-
-                      <li class="nav-item">
-                        <a
-                          class="nav-link nav-link--category"
-                          data-bs-toggle="tab"
-                          href="#navpill-2"
-                          role="tab"
-                        >
-                          <span class="category-nav-span">Payment</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link nav-link--category"
-                          data-bs-toggle="tab"
-                          href="#navpill-3"
-                          role="tab"
-                        >
-                          <span class="category-nav-span">History</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link nav-link--category"
-                          data-bs-toggle="tab"
-                          href="#navpill-4"
-                          role="tab"
-                        >
-                          <span class="category-nav-span">Documents</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <!-- booking start nav-pill 1 -->
-                    <div class="tab-pane active" id="navpill-1" role="tabpanel">
-                      <div class="tab-box">
-                        <div class="details-card">
-                          <div
-                            class="booking-info d-flex justify-content-between align-items-center"
-                          >
-                            <div
-                              class="booking-info-left d-flex align-items-center gap-5"
-                            >
-                              <h2>Booking Information</h2>
-                              <p>
-                                <span class="booking-label">Booking No:</span>
-                                <span class="booking-no">#93350 5666 94</span>
-                              </p>
-                            </div>
-                            <div class="booking-info-right">
-                              <a href="#" class="btn-edit">Edit</a>
-                            </div>
-                          </div>
-                          <div class="booking-info-table">
-                            <div class="row border-bottom">
-                              <div class="col-lg-2">
-                                <label>First Name</label>
-                                <p>Leslie</p>
-                              </div>
-                              <div class="col-lg-2">
-                                <label>Last Name</label>
-                                <p>Alexander</p>
-                              </div>
-                              <div class="col-lg-4">
-                                <label>Contact No</label>
-                                <p>+09 93350 5666 94</p>
-                              </div>
-                              <div class="col-lg-2">
-                                <label>Adults</label>
-                                <p>2</p>
-                              </div>
-                              <div class="col-lg-2">
-                                <label>Children</label>
-                                <p>1</p>
-                              </div>
-                            </div>
-                            <div class="row mt-4">
-                              <div class="col-lg-2">
-                                <label>Age</label>
-                                <p>Leslie</p>
-                              </div>
-                              <div class="col-lg-2">
-                                <label>Email</label>
-                                <p>Alexander</p>
-                              </div>
-                              <div class="col-lg-4">
-                                <label>Check In</label>
-                                <p>+09 93350 5666 94</p>
-                              </div>
-                              <div class="col-lg-2">
-                                <label>Check Out</label>
-                                <p>2</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="guest-lists">
-                          <div class="details-card">
-                            <div
-                              class="booking-info d-flex justify-content-between align-items-center"
-                            >
-                              <div class="booking-info-left">
-                                <h2>Guest Lists</h2>
-                              </div>
-                              <div class="booking-info-right">
-                                <a href="#" class="btn-edit">
-                                  <i
-                                    class="fas fa-plus"
-                                    style="font-size: 1.4rem"
-                                  ></i>
-                                  Add New
-                                </a>
-                              </div>
-                            </div>
-                            <div class="booking-info-table">
-                              <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Full Name</th>
-                                    <th scope="col">Age</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Phon Number</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">Theresa Webb (32)</th>
-                                    <td>32</td>
-                                    <td>lasie@gmail.com</td>
-                                    <td>+09 93350 5666 94</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                              <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Full Name</th>
-                                    <th scope="col">Age</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Phon Number</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">Theresa Webb (32)</th>
-                                    <td>32</td>
-                                    <td>lasie@gmail.com</td>
-                                    <td>+09 93350 5666 94</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                              <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Full Name</th>
-                                    <th scope="col">Age</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Phon Number</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">Theresa Webb (32)</th>
-                                    <td>32</td>
-                                    <td>lasie@gmail.com</td>
-                                    <td>+09 93350 5666 94</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                              <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Full Name</th>
-                                    <th scope="col">Age</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Phon Number</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">Theresa Webb (32)</th>
-                                    <td>32</td>
-                                    <td>lasie@gmail.com</td>
-                                    <td>+09 93350 5666 94</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- booking end nav-pill 1-->
-
-                    <!-- payment start pavpill 2 -->
-                    <div class="tab-pane" id="navpill-2" role="tabpanel">
-                      <div class="tab-box">
-                        <div class="details-card">
-                          <div
-                            class="booking-info d-flex justify-content-between align-items-center"
-                          >
-                            <div
-                              class="booking-info-left d-flex align-items-center gap-5"
-                            >
-                              <h2>Payment Information</h2>
-                              <p>
-                                <span class="booking-label">Booking No:</span>
-                                <span class="booking-no">#93350 5666 94</span>
-                              </p>
-                            </div>
-                            <div class="booking-info-right">
-                              <a href="#" class="btn-edit">Edit</a>
-                            </div>
-                          </div>
-
-                          <div class="payment-info-box">
-                            <div class="row">
-                              <div class="col-lg-6">
-                                <div class="row">
-                                  <div class="col-lg-6 mt-5">
-                                    <div>
-                                      <label>First Name</label>
-                                      <p>Leslie</p>
-                                    </div>
-                                    <div class="my-5">
-                                      <label>Email</label>
-                                      <p>lasie@gmail.com</p>
-                                    </div>
-                                    <div>
-                                      <label>Payment Method</label>
-                                      <p>Debit Card</p>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-6 mt-5">
-                                    <div>
-                                      <label>Last Name</label>
-                                      <p>Alexander</p>
-                                    </div>
-                                    <div class="my-5">
-                                      <label>Phon No</label>
-                                      <p>+09 93350 5666 94</p>
-                                    </div>
-                                    <div>
-                                      <label>Payment Date</label>
-                                      <p>July 12, 2023 | 15:40 PM</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-lg-6 align-self-center">
-                                <div class="details-card">
-                                  <div
-                                    class="book-charge d-flex justify-content-between align-items-center"
-                                  >
-                                    <div
-                                      class="charge-title d-flex flex-column gap-3"
-                                    >
-                                      <p>
-                                        <strong>35x</strong>
-                                        <span>10 night</span>
-                                      </p>
-                                      <p>Cleaning fee</p>
-                                      <p>Service fee</p>
-                                    </div>
-                                    <div class="charge-price">
-                                      <p>350.00</p>
-                                      <p>25.50</p>
-                                      <p>35.50</p>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="payment-total d-flex justify-content-between align-items-center"
-                                  >
-                                    <p style="margin-bottom: 0">Total</p>
-                                    <span>410.00</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="regular-payment mt-5">
-                          <div
-                            class="booking-info booking-info-regular-pay d-flex justify-content-between align-items-center"
-                          >
-                            <div class="booking-info-left">
-                              <h2>Regular Payment</h2>
-                            </div>
-                            <div class="booking-info-right">
-                              <a href="#" class="btn-edit">
-                                <i
-                                  class="fas fa-plus me-2"
-                                  style="font-size: 1.4rem"
-                                ></i>
-                                Add New
-                              </a>
-                            </div>
-                          </div>
-                          <div class="regular-payment-table">
-                            <table class="table">
-                              <thead class="table-light">
-                                <tr>
-                                  <th scope="col">Item</th>
-                                  <th scope="col">Price</th>
-                                  <th scope="col">Quantity</th>
-                                  <th scope="col">Date</th>
-                                  <th scope="col">Room No</th>
-                                  <th scope="col">Total</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- payment end pavpill 2 -->
-
-                    <!-- payment start navpill 3 -->
-
-                    <div class="tab-pane" id="navpill-3" role="tabpanel">
-                      <div class="tab-box">
-                        <div class="history-tab">
-                          <div
-                            class="booking-info booking-info-regular-pay d-flex justify-content-between align-items-center"
-                          >
-                            <div class="booking-info-left">
-                              <h2>Regular Payment</h2>
-                            </div>
-                            <div class="booking-info-right">
-                              <a href="#" class="btn-edit"> Edit </a>
-                            </div>
-                          </div>
-                          <div class="regular-payment-table">
-                            <table class="table">
-                              <thead class="table-light">
-                                <tr>
-                                  <th scope="col">Item</th>
-                                  <th scope="col">Price</th>
-                                  <th scope="col">Quantity</th>
-                                  <th scope="col">Date</th>
-                                  <th scope="col">Room No</th>
-                                  <th scope="col">Total</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row"></th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Fahed</th>
-                                  <td>AED 230</td>
-                                  <td>02</td>
-                                  <td>Jul 15, 2023</td>
-                                  <td>Deluxe Double With Balcony</td>
-                                  <td>AED 460</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- payment ends navpill 3 -->
-
-                    <!-- navpill 4 starts -->
-                    <div class="tab-pane" id="navpill-4" role="tabpanel">
-                      <div class="tab-box">
-                        <div class="details-card">
-                          <div
-                            class="booking-info d-flex justify-content-between align-items-center"
-                          >
-                            <div
-                              class="booking-info-left d-flex align-items-center gap-5"
-                            >
-                              <h2>Files</h2>
-                              <!-- files nav pills -->
-                              <div class="file-nav-tabs">
-                                <div class="tab-box">
-                                  <!-- Nav tabs -->
-                                  <div
-                                    class="tab-nav tab-nav--borderless mx-auto mx-sm-0"
-                                  >
-                                    <ul class="nav nav-pills" role="tablist">
-                                      <li class="nav-item">
-                                        <a
-                                          class="nav-link active"
-                                          data-bs-toggle="tab"
-                                          href="#unique-1"
-                                          role="tab"
-                                        >
-                                          <span class="category-nav-span"
-                                            >Leslie (29)</span
-                                          >
-                                        </a>
-                                      </li>
-                                      <li class="nav-item">
-                                        <a
-                                          class="nav-link nav-link--category"
-                                          data-bs-toggle="tab"
-                                          href="#unique-2"
-                                          role="tab"
-                                        >
-                                          <span class="category-nav-span"
-                                            >Theresa Webb (32)</span
-                                          >
-                                        </a>
-                                      </li>
-                                      <li class="nav-item">
-                                        <a
-                                          class="nav-link nav-link--category"
-                                          data-bs-toggle="tab"
-                                          href="#unique-3"
-                                          role="tab"
-                                        >
-                                          <span class="category-nav-span"
-                                            >Guy Hawkins (3)</span
-                                          >
-                                        </a>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- files nav pills ends-->
-                            </div>
-                            <div class="booking-info-right">
-                              <a href="#" class="btn-edit">Edit</a>
-                            </div>
-                          </div>
-                          <!-- file nav pill content starts -->
-                          <div class="tab-content">
-                            <div
-                              class="tab-pane active"
-                              id="unique-1"
-                              role="tabpanel"
-                            >
-                              <div class="tab-box d-flex gap-4 mt-5">
-                                <div
-                                  class="gallery-card-box d-flex align-items-center flex-column"
-                                >
-                                  <div class="gallery-img text-center">
-                                    <img
-                                      src="assets/images/icon/gallery-icon.png"
-                                      alt="gallery-icon"
-                                    />
-                                  </div>
-                                  <div class="gallery-content align-self-start">
-                                    <p>Photo Documents</p>
-                                    <h3>Passport Scan Copy</h3>
-                                  </div>
-                                </div>
-                                <div
-                                  class="gallery-card-box d-flex align-items-center flex-column"
-                                >
-                                  <div class="gallery-img text-center">
-                                    <img
-                                      src="assets/images/icon/pdf-icon.png"
-                                      alt="pdf-icon"
-                                    />
-                                  </div>
-                                  <div class="gallery-content align-self-start">
-                                    <p>Others Documents</p>
-                                    <h3>Title goes here</h3>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="tab-pane" id="unique-2" role="tabpanel">
-                              <div class="tab-box">
-                                <p>Theresa Webb 32</p>
-                              </div>
-                            </div>
-                            <div class="tab-pane" id="unique-3" role="tabpanel">
-                              <div class="tab-box">
-                                <p>Guy Hawkins 3</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- file nav pill content ends -->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- navpill 4 ends -->
-                  </div>
-                </div>
+              <div class="sleect">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="5">Five</option>
+                </select>
               </div>
+              <button class="add_btn">+ Add</button>
             </div>
+            <!-- Header section -->
+            <section class="header">
+              <div class="row">
+                <div class="col-lg-3">Date Added</div>
+                <div class="col-lg-3">Sales agent</div>
+                <div class="col-lg-3">Properties</div>
+                <div class="col-lg-3">Address</div>
+              </div>
+            </section>
+
+            <!-- Header section end -->
           </section>
         </div>
       </div>
@@ -1523,12 +837,7 @@
       <!-- End Page wrapper  -->
       <!-- -------------------------------------------------------------- -->
     </div>
-    <!-- -------------------------------------------------------------- -->
-    <!-- End Wrapper -->
-    <!-- -------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------- -->
-    <!-- All Jquery -->
-    <!-- -------------------------------------------------------------- -->
+
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
@@ -1547,5 +856,19 @@
     <!--Custom JavaScript -->
     <script src="assets/dist/js/feather.min.js"></script>
     <script src="assets/dist/js/custom.min.js"></script>
+    <script>
+      // theme switch example for demo
+      document.getElementById("btnSwitch").addEventListener("click", () => {
+        // console.log('hi , your used duplicate script')
+        const navBrand = document.querySelector(".navbar-brand");
+        navBrand.classList.toggle("active");
+        document.getElementById("btnSwitch").classList.toggle("active");
+        if (document.body.classList.contains("dark")) {
+          document.body.classList.remove("dark");
+        } else {
+          document.body.classList.add("dark");
+        }
+      });
+    </script>
   </body>
 </html>

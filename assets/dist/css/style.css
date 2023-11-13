@@ -761,6 +761,22 @@ progress {
   height: auto;
 }
 
+.add_btn {
+  width: 100px;
+  padding: 12px 24px;
+  background-color: #BB2429;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+.sleect {
+  border: none;
+  margin-left:16px;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #f4f6f9;
